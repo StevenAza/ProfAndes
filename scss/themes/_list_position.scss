@@ -1,0 +1,155 @@
+//  -------------------------------------
+//       FILTROS
+//  -------------------------------------
+.pr_item__top {
+    .container_filters__query {
+       width: 40%;
+       float: left;
+    }
+    .container_filters__type {
+        width: 40%;
+        float: left;
+    }
+    .container_filters__options {
+        width: 20%;
+        float: left;
+        display: flex;
+        .option_row {
+            display: flex;
+            flex-direction: column;
+            margin-right: 1em;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .container_filters {
+        transition: all .2s ease-in-out;
+        max-height: initial;
+        &.mini {
+            max-height: 86px;
+            .container_filters__alpha {
+                display: none;
+            }
+        }
+    }
+    .prof_list__main {
+        div[class*='col-md-4'] {
+            &:nth-child(4n) {
+                clear: both;
+            }
+         }
+    }
+}
+
+.pr_item__left {
+    position: relative;
+    margin-top: 5%;
+    .prof__container_row {
+        display: block;
+        &::before,
+        &::after
+        {
+            display: table;
+            clear: both;
+            content: '';
+        }
+    }
+    .container_filters__query {
+        width: 100%;
+     }
+     .container_filters__type {
+         width: 100%;
+        .type_row {
+            &__inp {
+                .type_custom__inline {
+                    display: flex;
+                    flex-direction: column;
+                    .btn-group-bd {
+                        display: flex;
+                        justify-content: space-between;
+                        white-space: normal;
+                        word-break: break-all;
+                        text-align: left;
+                    }
+                }
+            }
+        }
+     }
+     .container_filters {
+         position: relative;
+     }
+}
+.pr_item__right {
+    position: relative;
+    margin-top: 5%;
+    .prof__container_row {
+        display: block;
+        &::before,
+        &::after
+        {
+            display: table;
+            clear: both;
+            content: '';
+        }
+    }
+    .container_filters__query {
+        width: 100%;
+     }
+     .container_filters__type {
+         width: 100%;
+        .type_row {
+            &__inp {
+                .type_custom__inline {
+                    display: flex;
+                    flex-direction: column;
+                    ul.menu{
+                        .list{
+                           &:after{
+                              content: "\f107";
+                              font-family: 'Line Awesome Free';
+                              color: rgba(66, 66, 66, 0.637);
+                              top: 4px;
+                              font-size: 21px;
+                              left: 17px;
+                              right: 0;
+                           }
+                           a{
+                            display: flex;
+                            justify-content: flex-end;
+                            width: 100%;
+                            padding-right: 11% !important;
+                           }
+        
+                        }
+                        .list__one {
+                            display:  flex;
+                            justify-content: flex-end;
+                            padding-right: 10% !important;
+                           &:after{
+                            right: 0;
+                            left: 17px;
+                            content: "\f30a" !important;
+                           }
+                           &:hover {
+                              background-color: rgba(255, 255, 128, 0.678);
+                           }
+                        }
+                        .active{
+                           &:after{
+                              content: "\f106";
+                              font-family: 'Line Awesome Free';
+                              color:rgb(0, 0, 0);
+                              top: 7px;
+                              font-size: 21px;
+                           }
+                     }
+                    }
+                }
+            }
+        }
+     }
+     .container_filters {
+         position: relative;
+         float: right;
+     }
+}

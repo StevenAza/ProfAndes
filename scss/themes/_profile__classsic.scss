@@ -1,0 +1,188 @@
+.divide_icon {
+    .text_divide {
+        width: 86%;
+        float: right;
+    }
+    .icon_divive {
+        width: 14%;
+        float: left;
+        font-size: 22px;
+    }
+}
+.title_icon {
+    .ico_middle {
+        width: 5%;
+        float: left;
+        font-size: 23px;
+    }
+    .text_middle {
+        width: 95%;
+        float: left;
+        font-size: 30px;
+    }
+}
+
+.main_teach {
+    &.prof_style__classic {
+        @extend %prof-font;
+        .cont__header {
+          .prf_header--contenedor {
+              padding: 0px 20px;
+            .prf_header {
+                min-height: 60vh;
+                max-height: 90vh;
+                height: auto;
+                overflow: auto;
+
+                padding: 14px 20px;
+                background-color: rgb(255, 255, 255);
+                border-radius: 10px;
+                @include shadow_element(rgba(0, 0, 0, 0.2));
+                &__image {
+                    margin-bottom: 18px;
+                    figure {
+                        img {
+                            border-radius: 50%;
+                            z-index: 1;
+                        }
+                    }
+                    .clipart {
+                        background-image: url(../assets/img/tCircles.png);
+                        background-size: cover;
+                        position: absolute;
+                        height: 300px;
+                        width: 300px;
+                        top: -119px;
+                        z-index: 1;
+                        right: 134px;
+                    }
+                }
+                &__info {
+                    .prinfo_row {
+                        &__name {
+                          p {
+                            font-size: 26px;
+                            line-height: 32px;
+                          }
+                        }
+                        &__title {
+                            @extend .divide_icon;
+                            .icon_divive {
+                                color: #79571c;
+                            }
+                            .text_divide {
+                                color: #79571c;
+                            }
+                        }
+                    }
+                    .prcontact_row {
+                        clear: both;
+                        margin-bottom: 35px;
+                        @extend .divide_icon;
+                    }
+                }
+                
+                &::-webkit-scrollbar {
+                    width: 4px;
+                    height: 9px;
+                    background-color: rgba(109, 102, 102, 0.23);
+                    display: block;
+                 }
+
+                 &::-webkit-scrollbar-thumb {
+                    background: rgba(113, 110, 110, 0.8);
+                    border-radius: 12px;
+                 }
+
+                 &::-webkit-scrollbar-thumb:active {
+                    background: #626262;
+                 }
+
+                 &::-webkit-scrollbar-track {
+                    background: #b3b3b3;
+                    border-radius: 4px;
+                 }
+            }
+          }
+        }
+        .con__information {
+            @include shadow_element(rgba(0, 0, 0, 0.2));
+            padding: 0;
+            .cont__menu {
+                @include shadow_element(rgba(0, 0, 0, 0.137));
+                z-index: 3;
+                background-color: white;
+                padding: 0px;
+                .content-menu-filter {
+                    .content-filter-row {
+                        display: flex;
+                        justify-content: space-between;
+                        .row_tab {
+                            font-size: 16px;
+                            min-width: auto;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            height: 64px;
+                            width: 100%;
+                            align-items: center;
+                            position: relative;
+                            transition: all .3s linear;
+                            cursor: pointer;
+                            &__text {
+                                text-align: center;
+                            }
+                            &__icon {
+                                font-size: 22px;
+                            }
+                            &::before {
+                                content: "";
+                                transition: all .2s linear;
+                                position: absolute;
+                                bottom: 0;
+                                height: 3px;
+                                width: 0%;
+                                background: linear-gradient(40deg,#ffab83,#fcfc7d);
+                            }
+                            &.active,
+                            &:hover
+                             {
+                                transition: all .5s linear;
+                                background-color: rgba(255, 253, 206, 0.459);
+                                .row_tab {
+                                    &__text {
+                                        color: #79571c;
+                                    }
+                                    &__icon {
+                                        color: #79571c; 
+                                    }
+    
+                                }
+                                &::before {
+                                    content: "";
+                                    width: 77%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .content-box {
+                padding: 40px;
+                .box_basic_info__row {
+                    padding: 31px 0px;
+                    border-bottom: 1px solid #c3c1c1;
+                    .title-descripcion {
+                        @extend .title_icon;
+                        .ico_middle {
+
+                        }
+                        .text_middle {
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

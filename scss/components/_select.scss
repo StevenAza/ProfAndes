@@ -1,0 +1,33 @@
+.nice-select
+{
+    &.type_custom__select {
+        width: 90%;
+        &::after {
+            content: "\f107";
+            @include icon-content;
+            border-bottom: 0 solid #999;
+            border-right: 0 solid #999;
+            height: 20px;
+            margin-top: -4px;
+            pointer-events: none;
+            position: absolute;
+            right: 7%;
+            top: 1px;
+            transform-origin: 66% 66%;
+            transform: rotate(0deg);
+            transition: all .15s ease-in-out;
+            width: 5px;
+        }
+       &:focus {
+            border-color: transparent;
+       }
+       &.open {
+           &::after {
+            content: "\f106";
+            -webkit-transform: rotate(0);
+            -ms-transform: rotate(0);
+            transform: rotate(0);
+           }
+       }
+    }
+}

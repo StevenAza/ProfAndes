@@ -1,0 +1,57 @@
+.container_filters__query {
+ 
+    .filter_row {
+        &__label {
+            label {
+                margin-left: 10px;
+                @extend .lblg_filter;
+            }
+        }
+
+        &__inp {
+            position: relative;
+            input {
+                border: 0px;
+                width: 91%;
+                padding: 8px 5% 8px 3%;
+                &:focus {
+                    outline: none;
+                }
+            }
+            .ico {
+                position: absolute;
+                right: 70px;
+                top: 9px;
+                font-size: 19px;
+            }    
+        }
+    }
+
+}
+
+.container_filters__type {
+    .type_row {
+        &__label {
+            label {
+                margin-left: 10px;
+            }
+        }
+    }
+}
+
+.container_filters__alpha {
+    width: 94%;
+    float: left;
+    .filter_row {
+        &__label {
+            label {
+                @extend .lblg_filter;
+            }
+        }
+        &__pag {
+            .pagination {
+                margin: 0;
+            }
+        }
+    }
+}

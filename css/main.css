@@ -1,0 +1,708 @@
+/* latin-ext */
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Lato Regular'), local('Lato-Regular'), url(../../../uniandes_installer/assets/fuentes/lato-regular-latin-ext.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Lato Regular'), local('Lato-Regular'), url(../../../uniandes_installer/assets/fuentes/lato-regular-latin.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 900;
+    src: local('Lato Black'), local('Lato-Black'), url(../../../uniandes_installer/assets/fuentes/lato-black-latin-ext.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 900;
+    src: local('Lato Black'), local('Lato-Black'), url(../../../uniandes_installer/assets/fuentes/lato-black-latin.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+
+@-webkit-keyframes fadeClose {
+    from {opacity: 1;} 
+    to {opacity: 0;}
+}
+
+@keyframes fadeClose {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+.prof-list-component * {
+    box-sizing: border-box;
+}
+
+.prof-list-component {
+    /*font-family: "Open Sans", sans-serif;*/
+    font-family: 'Lato';
+}
+
+.prof-list-component .container-fluid{
+    width: 100%; margin: 0 auto
+}
+
+.prof-list-component .card-wrapper {
+    padding: 10px;  
+}
+
+/* ******** CONTENEDOR ********* */
+
+.prof-list-component .row{
+    margin: 0px;
+}
+
+.prof-list-component .content-menu{
+    position: static;
+    display: inline-block;
+}
+
+.prof-list-component .content-menu-icon{
+    display: block;
+}
+
+.prof-list-component .content-menu-filter {
+    width: 100%;
+    background-color: #f9f9f9;
+    border: 1px solid #E8E8E8;
+    border-radius: 6px;
+    padding: 15px;
+    position: relative;
+    z-index: 1;
+    left: 0%;
+    top: 0px;
+    right: 0%;
+    margin-left: 0px;
+    margin-right: 15px;
+    margin-top: 3px;
+    visibility: hidden;
+    -webkit-animation: fadeClose 1s;
+    animation: fadeClose 1s; 
+    margin-bottom: 10px;
+}
+
+.prof-list-component .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+}
+.prof-list-component .btn-group-menu{
+    position: relative;
+    display: flex;
+    vertical-align: middle;
+    align-items: stretch;
+    align-content: stretch;
+}
+
+.prof-list-component .btn-menu{
+    border-radius: 5px !important;
+    height: 35px;
+    vertical-align: middle;
+    text-align: center;
+    background-color : #E8E8E8;
+}
+
+.prof-list-component .btn-menu-flex-txt{
+    flex: 1 1 45%;
+}
+
+.prof-list-component .btn-menu-flex-ico{
+    flex: 1 1 10%;
+}
+
+.prof-list-component .btn-menu-flex-ico i{
+    font-size: 25px;
+}
+
+.prof-list-component .cont-btn-close{
+    display: block;
+}
+
+/* ******** TARJETA ********* */
+
+.prof-list-component .prof-card {
+    display: flex;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.prof-list-component .prof-card .card-image {
+    height: 6em;
+    width: 6em;
+    flex: 0 0 30%;
+}
+
+.prof-list-component .prof-card .card-content{
+    position: relative;
+    height: 6em;
+    flex: 0 0 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.prof-list-component .card-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 112px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-right-style: solid;
+    border-width: 2px;
+    border-color: #ECC204;
+}
+
+.prof-list-component .card-image figure {
+    margin: 0;
+    display: initial;
+}
+
+.prof-list-component .prof-card .card-info {
+    overflow: hidden;
+    padding: 8px 7px 2px 10px;
+    flex: 1 1 90px;
+}
+
+.prof-list-component .prof-card .card-button {
+    padding: 2px 7px 2px 10px;
+    flex: 1 1 25px;
+}
+
+.prof-list-component .card-info .prof-name {  
+    font-size: 0.9em;
+    line-height: 1.2em;
+    color: #565656;
+    font-weight: bold;
+    padding-bottom: 0.2em;
+    padding-top: 0.4em;
+}
+
+.prof-list-component .card-info .prof-dept {
+    font-size: 0.7em;
+    line-height: 1em;
+    color: #848484;
+}
+
+.prof-list-component .card-info .prof-role {
+    font-size: 0.7em;
+    line-height: 1em;
+}
+
+.prof-list-component .btn-ver-mas{
+    position: absolute;
+    right: 6px;
+    bottom: 6px;
+    padding: 3px 10px;
+    font-size: 0.7em;
+    line-height: 1.42857143;
+    text-align: center;
+    float: right;
+    background-color: #FFFFFF;
+    color: #000000;
+    border-radius: 15px;
+    border: 1px solid #fba200;
+}
+
+.prof-list-component .btn-cerrar{
+    display: inline-block;
+    padding: 6px 6px;
+    margin-bottom: 0;
+    font-size: 0.7em;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    float: right;
+    background-color: #FFFFFF;
+}
+
+/* ******** MENU ********* */
+.prof-list-component .content-filter{
+    padding-top: 8px;
+}
+
+.prof-list-component .content-filter-row{
+    width: 100%;
+}
+
+.prof-list-component .label-filter{
+    color: #767575;
+    font-size: 1em;
+    font-stretch: expanded;
+    font-weight: 500;
+    border-bottom: 1px dotted #bfbfbf;
+    margin-bottom: 16px;
+    line-height: 25px;
+}
+
+.prof-list-component .btn-group-bd{
+    background-color: #FFFFFF;
+    border-color: #d4d4d4;
+    border-radius: 3px !important;
+    line-height: 1.3rem;
+    font-size: 0.8em;
+    font-stretch: expanded;
+    margin: 2px 0px;
+    width: 100%;
+}
+
+.prof-list-component .btn-group-bd-sel, .btn-group-bd:hover{
+    color: #808080;
+    background-color: #ececec;
+    border-color: #d2d2d2;
+}
+
+.prof-list-component .btn-group-bd.btn-group-bd-sel span, .prof-list-component .btn-group-bd:hover span{
+    color: #757575;
+    background-color: transparent;
+    float: left;
+}
+
+.prof-list-component .btn-group-bd span{
+    color: #3a3a3a;
+    background-color: #FFFFFF;
+    float: left;
+    font-size: 0.75rem;
+}
+
+.prof-list-component .icon-search-prof{
+    float: right; 
+    font-size:1.8em; 
+    color: #8a8a8a; 
+    vertical-align: middle; 
+    padding-left: 5px;
+}
+
+.prof-list-component .content-filter-row{
+    width: 100%;
+    display: grid;
+}
+
+
+.prof-list-component input {
+    background-color: #fff;
+    border: 1px solid #dedede;
+    padding: 4px 6px;
+    color: #555;
+    vertical-align: middle;
+    border-radius: 50px;
+    width: 100%;
+    line-height: 22px;
+    margin-bottom: 10px;
+    cursor: text;
+}
+
+.prof-list-component .inner-addon .fa {
+    position: absolute;
+    padding: 9px 16px;
+    pointer-events: none;
+    border-radius: 50px; 
+}
+
+.prof-list-component .right-addon .fa { 
+    right: 10px;
+}
+
+.prof-list-component .right-addon input { 
+    padding-right: 30px;
+}
+
+.prof-list-component .icon-filter-prof{
+    font-size:1em;
+    vertical-align: middle; 
+    padding-left: 5px;
+}
+
+.prof-list-component .btn-search{
+    float: right;
+    padding-top: 2px;
+    padding-right: 2px;
+    flex: 0 0 10%;
+    text-align: center;
+}
+
+.prof-list-component #prof-pagination a {
+	border-color: #E5E5E5 !important;
+	color: #808080;
+}
+
+.prof-list-component #prof-pagination :not(.active) a {
+	background-color: #EDEDED !important; 
+}
+
+.prof-list-component .btn-close-popup{
+    font-size:1.8em; 
+    vertical-align: middle; 
+    padding-left: 5px;
+}
+
+.prof-list-component .btn-ver-perfil{
+    font-size:1.8em; 
+    vertical-align: middle; 
+    padding-left: 5px;
+}
+/* ******** PAGINADOR ********* */
+
+.prof-list-component #prof-pagination a {
+    font-family: 'Lato', sans-serif;
+    border-radius: 5px;
+    margin: 3px;
+    min-width: 22%;
+    text-align: center;
+    font-size: 12px;
+}
+
+.prof-list-component .pagination{
+    margin: 0px;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+    .prof-list-component .container-fluid{
+        width: 100%; margin: 0 auto
+    }
+
+    /* ******** TARJETA ********* */
+    .prof-list-component .prof-card {
+        display: flex;
+        overflow: hidden;
+        border-radius: 5px;
+    }
+
+    .prof-list-component .prof-card .card-image {
+        height: 7em;
+        width: 7em;
+        flex: 0 0 30%;
+    }
+
+    .prof-list-component .prof-card .card-content{
+        height: 7em;
+        flex: 0 0 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .prof-list-component .prof-card .card-info {
+        overflow: hidden;
+        padding: 8px 7px 2px 10px;
+        flex: 1 1 90px;
+    }
+
+    .prof-list-component .prof-card .card-button {
+        padding: 2px 7px 2px 10px;
+        flex: 1 1 25px;
+    }
+
+    .prof-list-component .card-info .prof-name {  
+        font-size: 0.9em;
+        line-height: 1.2em;
+        color: #565656;
+        font-weight: bold;
+        padding-bottom: 0.2em;
+        padding-top: 0.4em;
+    }
+
+    .prof-list-component .card-info .prof-dept {
+        font-size: 0.8em;  
+        line-height: 1.2em;
+        color: #848484;
+    }
+
+    .prof-list-component .card-info .prof-role {
+        font-size: 0.8em;  
+        line-height: 1.2em;
+        color: #404040;
+        padding-top: 2px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .prof-list-component .container-fluid{
+        width: 75%; margin: 0 auto
+    }
+
+    /* ******** CONTENEDOR ********* */
+    .prof-list-component .content-title{
+        width: 100%; 
+        float: left; 
+        padding: 5px;
+    }
+
+    .prof-list-component .content-menu{
+        position: relative;
+        display: block;
+		min-height: 600px;
+    }
+
+    .prof-list-component .content-menu-icon{
+        display: none;
+    }
+
+    .prof-list-component .cont-btn-close{
+        display: none;
+    }
+
+    .prof-list-component .content-menu-filter {
+        visibility: visible;
+        -webkit-animation: inherit;
+        animation: inherit;
+    }
+    /* ******** TARJETA ********* */
+
+    .prof-list-component .prof-card {
+        display: flex;
+        overflow: hidden;
+        border-radius: 5px;
+    }
+
+    .prof-list-component .prof-card .card-image {
+        height: 8em;
+        width: 8em;
+        flex: 0 0 30%;
+    }
+
+    .prof-list-component .prof-card .card-content{
+        height: 8em;
+        flex: 0 0 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .prof-list-component .card-image img {
+        width: 100%;
+        height: 100%;
+        min-height: 112px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-right-style: solid;
+        border-width: 2px;
+    }
+
+    .prof-list-component .prof-card .card-info {
+        overflow: hidden;
+        padding: 8px 7px 2px 10px;
+        flex: 1 1 90px;
+    }
+
+    .prof-list-component .prof-card .card-button {
+        padding: 2px 7px 2px 10px;
+        flex: 1 1 25px;
+    }
+
+    .prof-list-component .card-info .prof-name {  
+        font-size: 0.9em;
+        line-height: 1.2em;
+        color: #565656;
+        font-weight: bold;
+        padding-bottom: 0.2em;
+        padding-top: 0.4em;
+    }
+
+    .prof-list-component .card-info .prof-dept {
+        font-size: 0.8em;  
+        line-height: 1.2em;
+        color: #848484;
+    }
+
+    .prof-list-component .card-info .prof-role {
+        font-size: 0.8em;  
+        line-height: 1.2em;
+        color: #404040;
+        padding-top: 2px;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .prof-list-component .container-fluid{
+        width: 75%; margin: 0 auto
+    }
+
+    /* ******** CONTENEDOR ********* */
+    .prof-list-component .content-title{
+        width: 100%; 
+        float: left; 
+        padding: 5px;
+    }
+
+    .prof-list-component .content-menu{
+        position: relative;
+        display: block;
+		min-height: 600px;
+    }
+
+    .prof-list-component .content-menu-icon{
+        display: none;
+    }
+
+    .prof-list-component .cont-btn-close{
+        display: none;
+    }
+
+    .prof-list-component .content-menu-filter {
+        visibility: visible;
+        -webkit-animation: inherit;
+        animation: inherit;
+    }
+    /* ******** TARJETA ********* */
+
+    .prof-list-component .prof-card {
+        display: flex;
+        overflow: hidden;
+        border-radius: 5px;
+    }
+
+    .prof-list-component .prof-card .card-image {
+        height: 8em;
+        width: 8em;
+        flex: 0 0 30%;
+    }
+
+    .prof-list-component .prof-card .card-content{
+        height: 8em;
+        flex: 0 0 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .prof-list-component .card-image img {
+        width: 100%;
+        height: 100%;
+        min-height: 112px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-right-style: solid;
+        border-width: 2px;
+        border-color: #ECC204;
+    }
+
+    .prof-list-component .prof-card .card-info {
+        overflow: hidden;
+        padding: 8px 7px 2px 10px;
+        flex: 1 1 90px;
+    }
+
+    .prof-list-component .prof-card .card-button {
+        padding: 2px 7px 2px 10px;
+        flex: 1 1 25px;
+    }
+
+    .prof-list-component .card-info .prof-name {  
+        font-size: 0.9em;
+        line-height: 1.2em;
+        color: #565656;
+        font-weight: bold;
+        padding-bottom: 0.2em;
+        padding-top: 0.4em;
+    }
+
+    .prof-list-component .card-info .prof-dept {
+        font-size: 0.8em;  
+        line-height: 1.2em;
+        color: #848484;
+    }
+
+    .prof-list-component .card-info .prof-role {
+        font-size: 0.8em;  
+        line-height: 1.2em;
+        color: #404040;
+        padding-top: 2px;
+    }
+}
+
+/* Other styles*/
+#prof-list-items {
+    margin-bottom: 30px;
+}
+#prof-list-items a {
+    text-decoration: none;
+}
+.card-principal { 
+    border: 1px solid #eee;
+    border-radius: 5px;
+    animation-duration: 3s; 
+}
+#prof-list-items .cursor .card-principal { 
+    border: 1px solid #eee;
+    border-radius: 5px;
+    animation-duration: 3s; 
+    cursor: pointer;
+}
+#prof-list-items .cursor .card-principal:hover {
+    background: #f9f8f8;
+    box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+}
+.prof-list-component .card-info .prof-title {
+    font-weight: bold;
+    font-size: 0.8em;
+    line-height: 1.3em;
+    color: #757575;
+    padding-top: 0px;
+}
+.prof-footer {
+    font-size: 0.7rem;
+    border: 1px solid #eeeeee;
+    background: #ffffff;
+    line-height: 14px;
+    padding: 5px;
+    margin: 0px;
+    margin-top: -1px;
+    padding-left: 10px;
+    font-weight: bold;
+    border-radius: 0px 0px 5px 5px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+@media only screen and (max-width:768px) {
+    .prof-list-component .content-menu-filter {
+        width: auto;
+        position: absolute;  
+        margin-left: 15px;
+    }
+    #prof-list-items {
+        min-height: calc(100rem - 40rem);
+    }
+    .prof-list-component .card-image img {
+        min-height: auto;
+    }
+    .prof-list-component .card-info .prof-role {
+        line-height: 0.9rem;
+    }
+    .prof-list-component .card-info .prof-name {
+        padding-top: 0.2rem;
+    }
+    .prof-list-component .card-info .prof-title {
+        line-height: 0.7rem;
+    }
+}
+

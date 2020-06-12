@@ -1,0 +1,38 @@
+#toTop {
+    position: fixed;
+    bottom: 21px;
+    z-index: 99999;
+    right: 10px;
+    padding: 18px;
+    background-color: #f5f5f5;
+    border-radius: 50%;
+    color: #e26c06;
+    transition: all .2s linear;
+    opacity: 0;
+    user-select: none;
+    cursor: context-menu;
+    @include shadow_element(rgba(166, 173, 201, .2));
+    i {
+        transition: all .3s linear;
+        font-size: 31px;
+    }
+    &:focus,
+    &:active,
+    &:visited
+    {
+        text-decoration: none;
+    }
+    &:hover {
+        background-color: #f9efe2;
+        text-decoration: none;
+        i {
+            color: #e26c06;
+            transform: translateY(-5px);
+        }
+    }
+    &.show {
+        user-select: auto;
+        cursor: pointer;
+        opacity: 1;
+    }
+}

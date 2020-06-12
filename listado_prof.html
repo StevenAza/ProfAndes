@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantilla Profesores</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/profesores.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <script src="assets/plugin/js/jquery.nice-select.js"></script>
+    <link rel="stylesheet" href="assets/plugin/css/nice-select.css">
+    <script src="js/prof.js"></script>
+    <link rel="stylesheet" href="assets/icons/theme_classic/css/import-icons.css">
+    <script src="assets/plugin/js/sticky.js"></script>
+</head>
+
+<body>
+    <header class="listado">
+        <div class="container">
+            <div class="col-md-6">
+                <img class="header_img" src="https://academia.uniandes.edu.co/img/logobl.png" alt="">
+            </div>
+            <div class="col-md-4">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">Tema<span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Clasico</a></li>
+                        <li><a href="#">Material</a></li>
+                        <li><a href="#">Dark</a></li>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default dropdown-toggle posicion__select" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">Posición <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" class="escoger_posicion"  data-position="izquierda">Izquierda</a></li>
+                        <li><a href="#" class="escoger_posicion"  data-position="derecha">Derecha</a></li>
+                        <li><a href="#" class="escoger_posicion"  data-position="rriba">Arriba</a></li>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="prof__container prof_style__classic pr_item__top" data-sticky-container>
+      <div class="prof__container_row">
+        <div class="content-menu">
+            <div class="content-menu-icon__responsive">
+                <div class="btn-group-menu">
+                    <button type="button" class="btn btn-menu btn-menu-flex-txt">Tipo de profesor <i
+                            class="las fa-certificate"></i></button>
+                    <button type="button" class="btn btn-menu btn-menu-flex-txt">Alfabético</button>
+                    <button type="button" class="btn btn-menu btn-menu-flex-ico"><i class="fa fa-filter"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="container_filters">
+            <div class="container" data-sticky-class="is-sticky">
+                <div class="container_filters__query">
+                    <div class="filter_row filter_row__label">
+                        <label class="label-filter">Buscar por nombre</label>
+                    </div>
+                    <div class="filter_row filter_row__inp">
+                        <input type="text" value="" id="input-search-string">
+                        <i class="la la-search ico"></i>
+                    </div>
+                </div>
+                <div class="container_filters__type">
+                    <div class="type_row type_row__label">
+                        <label for="">Seleccione el tipo</label>
+                    </div>
+                    <div class="type_row type_row__inp">
+                        <div class="type_custom__inline">
+                            <ul class="menu">
+                                <li class="list"><a >Profesor Títulado </a> 
+                                   <ul class="items">
+                                      <li><a href="#"> Item 1-1</a></li>
+                                      <li><a href="#"> Item 1-2</a></li>
+                                      <li><a href="#"> Item 1-3</a></li>
+                                   </ul>
+                                </li>
+                                <li class="list"><a >Profesor Asociado</a> 
+                                   <ul class="items">
+                                      <li> <a href="#" > Item 2-1 </a></li>
+                                      <li> <a href="#" > Item 2-2 </a></li>
+                                      <li> <a href="#" > Item 2-3 </a></li>
+                                   </ul>
+                                </li>
+                                <li class="list"><a >Profesor Asistente</a> 
+                                   <ul class="items">
+                                      <li> <a href="#" > Item 3-1 </a></li>
+                                      <li> <a href="#" > Item 3-2 </a></li>
+                                      <li> <a href="#" > Item 3-2 </a></li>
+                                   </ul>
+                                </li>
+                                <li class="list"><a >Profesor Clínico</a> 
+                                   <ul class="items">
+                                      <li> <a href="#" > Item 4-1 </a></li>
+                                      <li> <a href="#" > Item 4-2 </a></li>
+                                      <li class="list"><a href="#">List 4-1</a> 
+                                         <ul  class="items">
+                                            <li> <a href="#" > Item 4-1-1</a></li>
+                                            <li> <a href="#" > Item 4-1-2</a></li>
+                                            <li class="list"><a href="#">List 4-2</a> 
+                                               <ul  class="items">
+                                                  <li> <a href="#" > Item 4-2-1</a></li>
+                                                  <li> <a href="#" > Item 4-2-2</a></li>
+                                               </ul>
+                                            </li>
+                                         </ul>
+                                      </li>
+                                   </ul>
+                                </li>
+                                <li class="list__one"><a>Todo</a> 
+                                 </li>
+                             </ul>
+     <!--                        <button type="button" class="btn btn-group-bd btn-group-bd">
+                                <span class="btn-group-bd__text">Profesor Titular</span> 
+                                <i class="btn-group-bd__icon las la-long-arrow-alt-right"></i>
+                            </button>
+                            <button type="button" class="btn btn-group-bd">
+                                <span class="btn-group-bd__text">Profesor Asociado</span> 
+                                <i class="btn-group-bd__icon las la-long-arrow-alt-right"></i>
+                            </button>
+                            <button type="button" class="btn btn-group-bd">
+                                <span class="btn-group-bd__text">Profesor Asistente</span>
+                                <i class="btn-group-bd__icon las la-long-arrow-alt-right"></i>
+                            </button>
+                            <button type="button" class="btn btn-group-bd disabled">
+                                <span class="btn-group-bd__text">Profesor Clínico</span>
+                                <i class="btn-group-bd__icon las la-long-arrow-alt-right"></i>
+                            </button>
+                            <button type="button" class="btn btn-group-bd" >
+                                <span class="btn-group-bd__text">Todo</span>
+                                 <i class="btn-group-bd__icon las la-long-arrow-alt-right"></i>
+                            </button> -->
+                        </div>
+                        <select class="type_custom__select" name="options_type">
+                            <option value="">Investigador postdoctorado</option>
+                            <option value="">Nuevo Tipo</option>
+                            <option value="">Profesor Asistente</option>
+                            <option value="">Profesor Asociado</option>
+                            <option value="">Profesor Títular</option>
+                            <option value="">No categorizado</option>
+                            <option value="">Todos</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="container_filters__options">
+                    <div class="option_row option_row__fixed">
+                        <label>Desanclar</label>
+                        <button class="btn_option initial">
+                            <i class="ico_opt las la-thumbtack"></i>
+                        </button>       
+                    </div>
+                    <div class="option_row option_row__mini">
+                        <label for="">Minimizar</label>
+                        <button class="btn_option minimal">
+                            <i class="ico_opt las la-compress-arrows-alt"></i>
+                        </button>    
+                    </div>
+                </div>
+                <div class="container_filters__alpha">
+                    <div class="filter_row filter_row__label">
+                        <label class="label-filter">Alfabético</label>
+                    </div>
+                    <div class="filter_row filter_row__pag">
+                        <ul id="prof-pagination" class="pagination">
+                            <li class="filter-letters " data-lett="A">
+                                <a class="page-link " href="">A</a>
+                            </li>
+                            <li class="filter-letters active" data-lett="B">
+                                <a class="page-link" href="">B</a>
+                            </li>
+                            <li class="filter-letters" data-lett="C">
+                                <a class="page-link" href="">C</a>
+                            </li>
+                            <li class="filter-letters" data-lett="D">
+                                <a class="page-link" href="">D</a>
+                            </li>
+                            <li class="filter-letters" data-lett="E">
+                                <a class="page-link" href="">E</a>
+                            </li>
+                            <li class="filter-letters" data-lett="F">
+                                <a class="page-link" href="">F</a>
+                            </li>
+                            <li class="filter-letters" data-lett="G">
+                                <a class="page-link" href="">G</a>
+                            </li>
+                            <li class="filter-letters disabled" data-lett="H">
+                                <a class="page-link" href="">H</a>
+                            </li>
+                            <li class="filter-letters disabled" data-lett="I">
+                                <a class="page-link" href="">I</a>
+                            </li>
+                            <li class="filter-letters" data-lett="J">
+                                <a class="page-link" href="">J</a>
+                            </li>
+                            <li class="filter-letters disabled" data-lett="K">
+                                <a class="page-link" href="">K</a>
+                            </li>
+                            <li class="filter-letters" data-lett="L">
+                                <a class="page-link" href="">L</a>
+                            </li>
+                            <li class="filter-letters" data-lett="M">
+                                <a class="page-link" href="">M</a>
+                            </li>
+                            <li class="filter-letters" data-lett="N">
+                                <a class="page-link" href="">N</a>
+                            </li>
+                            <li class="filter-letters disabled" data-lett="Ñ">
+                                <a class="page-link" href="">Ñ</a>
+                            </li>
+                            <li class="filter-letters" data-lett="O">
+                                <a class="page-link" href="">O</a>
+                            </li>
+                            <li class="filter-letters disabled" data-lett="P">
+                                <a class="page-link" href="">P</a>
+                            </li>
+                            <li class="filter-letters disabled" data-lett="Q">
+                                <a class="page-link" href="">Q</a>
+                            </li>
+                            <li class="filter-letters" data-lett="R">
+                                <a class="page-link" href="">R</a>
+                            </li>
+                            <li class="filter-letters" data-lett="S">
+                                <a class="page-link" href="">S</a>
+                            </li>
+                            <li class="filter-letters disabled" data-lett="T">
+                                <a class="page-link" href="">T</a>
+                            </li>
+                            <li class="filter-letters disabled" data-lett="U">
+                                <a class="page-link" href="">U</a>
+                            </li>
+                            <li class="filter-letters" data-lett="V">
+                                <a class="page-link" href="">V</a>
+                            </li>
+                            <li class="filter-letters disabled" data-lett="W">
+                                <a class="page-link" href="">W</a>
+                            </li>
+                            <li class="filter-letters disabled" data-lett="X">
+                                <a class="page-link" href="">X</a>
+                            </li>
+                            <li class="filter-letters disabled" data-lett="Y">
+                                <a class="page-link" href="">Y</a>
+                            </li>
+                            <li class="filter-letters disabled" data-lett="Z">
+                                <a class="page-link" href="">Z</a>
+                            </li>
+                            <li class="filter-letters" data-lett="all">
+                                <a class="page-link" href="">Todo</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="container_filters__button" style="display:none">
+                    <div class="content-filter-row">
+                        <button type="button" id="btnPopCloseProf" class="btn btn-cerrar"><i
+                                style="font-size:1.8em; color: #000000; vertical-align: middle; padding-left: 5px;"
+                                class="fa fa-times-circle"></i> Cerrar</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="container prof_list__main" id="prof-list-items">
+            <section class="no-prof-items" style="display:none;">
+                <div class="container">
+                <div class="no_prof_row no_prof_row__icon">
+                    <i class="las la-frown"></i>
+                </div>
+                <div class="no_prof_row no_prof_row__message">
+                    <span class=""> No hay contenido disponible</span>
+                </div>
+                </div>
+             </section>
+             <div class="row">
+                <div class="prof-list-item col-xs-12 col-sm-4 col-md-4 card-wrapper">
+                    <article class="pr_card card-principal">
+                        <div class="pr_card__image">
+                            <div class="pr_card__bg">
+                                <div class="pr_clip_art"></div>
+                            </div>
+                            <figure><img alt="Ejemplo Profesor Local" title="Ejemplo Profesor Local"
+                                src="https://academia.uniandes.edu.co/WebServicesAcademy/api/AcademyImages/photos/10253.JPG"
+                                onerror="this.src = 'https://plantillatest.uniandes.edu.co/sites/all/modules/custom/uniandes_prof_api/assets/img/nophoto.png';">
+                        </figure>
+                        </div>
+                        <div class="pr_main_content">
+                            <div class="card-info pr_card__info">
+                                <div class="pr_card_info__nombre" data-keyword="ejemplo profesor local">Henry Bernard Smit Kindermann</div>
+                                <div class="pr_card_info__title">
+                                    <i class="ico_c las la-award"></i>
+                                    <p class="desc_c">Doutor em Engenharia Electrotecnica e Computadores</p>  
+                                </div>
+                                <div class="pr_card_info__email pr_card_info__item">
+                                    <i class="ico_c las la-envelope"></i>
+                                    <p class="desc_c">cs.sanchezr@uniandes.edu.co </p>
+                                </div>
+                                <div class="pr_card_info__role pr_card_info__item">
+                                    <i class="ico_c las la-id-card-alt"></i>
+                                    <p class="desc_c">Profesor Titular Emérito</p>
+                                </div>
+                                <div class=" pr_card_info__item">
+                                    <i class="ico_c las la-mars"></i>
+                                    <p class="desc_c">Hombre</p>
+                                </div>
+                                <div class=" pr_card_info__item">
+                                    <i class="ico_c  las la-venus"></i>
+                                    <p class="desc_c">Mujer</p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card_info__extension">
+                                    <i class="ico_c las la-tty"></i>
+                                    <p class="desc_c">Extensión: 790</p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card_info__oficina">
+                                    <i class="ico_c las la-city"></i>
+                                    <p class="desc_c">Oficina: RBCG 334</p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card_info__peingles">
+                                    <i class="ico_c las la-quote-left"></i>
+                                    <p class="desc_c">
+                                        Licensed Attorney with expertise in Private Law. Main fields of interest: Civil and Commercial Law, Obligations, Contracts, Civil Liability, Business Law Legal history
+                                    </p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card_info__pespanol">
+                                    <i class="ico_c las la-quote-left"></i>
+                                    <p class="desc_c">
+                                        Abogada con énfasis en Derecho Privado. Áreas de interés: Derecho Civil y Comercial, Obligaciones, Contratos, Responsabilidad civil, Derecho de los Negocios, Historia del Derecho.   
+                                    </p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card__info_idtype">
+                                    <i class="ico_c las la-link"></i>
+                                    <a class="desc_c" href="#">
+                                        CODECOLCIENCIAS
+                                    </a>
+                                </div>
+                                <div class=" pr_card_info__item pr_card__info__facultad">
+                                    <i class="ico_c las la-graduation-cap"></i>
+                                    <p class="desc_c" href="#">
+                                        Facultad de derecho
+                                    </p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card__info__dedication">
+                                    <i class="ico_c las la-user-check"></i>
+                                    <p class="desc_c" href="#">
+                                        Tiempo parcial
+                                    </p>
+                                </div>
+                                <div class="pr_card_info__action">Ver más <i class="ico_action las la-arrow-right"></i></div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="prof-list-item col-xs-12 col-sm-4 col-md-4 card-wrapper">
+                    <article class="pr_card card-principal">
+                        <div class="pr_card__image">
+                            <div class="pr_card__bg">
+                                <div class="pr_clip_art"></div>
+                            </div>
+                            <figure><img alt="Ejemplo Profesor Local" title="Ejemplo Profesor Local"
+                                src="https://academia.uniandes.edu.co/WebServicesAcademy/api/AcademyImages/photos/10253.JPG"
+                                onerror="this.src = 'https://plantillatest.uniandes.edu.co/sites/all/modules/custom/uniandes_prof_api/assets/img/nophoto.png';">
+                        </figure>
+                        </div>
+                        <div class="pr_main_content">
+                            <div class="card-info pr_card__info">
+                                <div class="pr_card_info__nombre" data-keyword="ejemplo profesor local">Henry Bernard Smit Kindermann</div>
+                                <div class="pr_card_info__title">
+                                    <i class="ico_c las la-award"></i>
+                                    <p class="desc_c">Doutor em Engenharia Electrotecnica e Computadores</p>  
+                                </div>
+                                <div class="pr_card_info__email pr_card_info__item">
+                                    <i class="ico_c las la-envelope"></i>
+                                    <p class="desc_c">cs.sanchezr@uniandes.edu.co </p>
+                                </div>
+                                <div class="pr_card_info__role pr_card_info__item">
+                                    <i class="ico_c las la-id-card-alt"></i>
+                                    <p class="desc_c">Profesor Titular Emérito</p>
+                                </div>
+                                <div class=" pr_card_info__item">
+                                    <i class="ico_c las la-mars"></i>
+                                    <p class="desc_c">Hombre</p>
+                                </div>
+                                <div class=" pr_card_info__item">
+                                    <i class="ico_c  las la-venus"></i>
+                                    <p class="desc_c">Mujer</p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card_info__extension">
+                                    <i class="ico_c las la-tty"></i>
+                                    <p class="desc_c">Extensión: 790</p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card_info__oficina">
+                                    <i class="ico_c las la-city"></i>
+                                    <p class="desc_c">Oficina: RBCG 334</p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card_info__peingles">
+                                    <i class="ico_c las la-quote-left"></i>
+                                    <p class="desc_c">
+                                        Licensed Attorney with expertise in Private Law. Main fields of interest: Civil and Commercial Law, Obligations, Contracts, Civil Liability, Business Law Legal history
+                                    </p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card_info__pespanol">
+                                    <i class="ico_c las la-quote-left"></i>
+                                    <p class="desc_c">
+                                        Abogada con énfasis en Derecho Privado. Áreas de interés: Derecho Civil y Comercial, Obligaciones, Contratos, Responsabilidad civil, Derecho de los Negocios, Historia del Derecho.   
+                                    </p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card__info_idtype">
+                                    <i class="ico_c las la-link"></i>
+                                    <a class="desc_c" href="#">
+                                        CODECOLCIENCIAS
+                                    </a>
+                                </div>
+                                <div class=" pr_card_info__item pr_card__info__facultad">
+                                    <i class="ico_c las la-graduation-cap"></i>
+                                    <p class="desc_c" href="#">
+                                        Facultad de derecho
+                                    </p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card__info__dedication">
+                                    <i class="ico_c las la-user-check"></i>
+                                    <p class="desc_c" href="#">
+                                        Tiempo parcial
+                                    </p>
+                                </div>
+                                <div class="pr_card_info__action">Ver más <i class="ico_action las la-arrow-right"></i></div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="prof-list-item col-xs-12 col-sm-4 col-md-4 card-wrapper">
+                    <article class="pr_card card-principal">
+                        <div class="pr_card__image">
+                            <div class="pr_card__bg">
+                                <div class="pr_clip_art"></div>
+                            </div>
+                            <figure><img alt="Ejemplo Profesor Local" title="Ejemplo Profesor Local"
+                                src="https://academia.uniandes.edu.co/WebServicesAcademy/api/AcademyImages/photos/10253.JPG"
+                                onerror="this.src = 'https://plantillatest.uniandes.edu.co/sites/all/modules/custom/uniandes_prof_api/assets/img/nophoto.png';">
+                        </figure>
+                        </div>
+                        <div class="pr_main_content">
+                            <div class="card-info pr_card__info">
+                                <div class="pr_card_info__nombre" data-keyword="ejemplo profesor local">Henry Bernard Smit Kindermann</div>
+                                <div class="pr_card_info__title">
+                                    <i class="ico_c las la-award"></i>
+                                    <p class="desc_c">Doutor em Engenharia Electrotecnica e Computadores</p>  
+                                </div>
+                                <div class="pr_card_info__email pr_card_info__item">
+                                    <i class="ico_c las la-envelope"></i>
+                                    <p class="desc_c">cs.sanchezr@uniandes.edu.co </p>
+                                </div>
+                                <div class="pr_card_info__role pr_card_info__item">
+                                    <i class="ico_c las la-id-card-alt"></i>
+                                    <p class="desc_c">Profesor Titular Emérito</p>
+                                </div>
+                                <div class=" pr_card_info__item">
+                                    <i class="ico_c las la-mars"></i>
+                                    <p class="desc_c">Hombre</p>
+                                </div>
+                                <div class=" pr_card_info__item">
+                                    <i class="ico_c  las la-venus"></i>
+                                    <p class="desc_c">Mujer</p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card_info__extension">
+                                    <i class="ico_c las la-tty"></i>
+                                    <p class="desc_c">Extensión: 790</p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card_info__oficina">
+                                    <i class="ico_c las la-city"></i>
+                                    <p class="desc_c">Oficina: RBCG 334</p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card_info__peingles">
+                                    <i class="ico_c las la-quote-left"></i>
+                                    <p class="desc_c">
+                                        Licensed Attorney with expertise in Private Law. Main fields of interest: Civil and Commercial Law, Obligations, Contracts, Civil Liability, Business Law Legal history
+                                    </p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card_info__pespanol">
+                                    <i class="ico_c las la-quote-left"></i>
+                                    <p class="desc_c">
+                                        Abogada con énfasis en Derecho Privado. Áreas de interés: Derecho Civil y Comercial, Obligaciones, Contratos, Responsabilidad civil, Derecho de los Negocios, Historia del Derecho.   
+                                    </p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card__info_idtype">
+                                    <i class="ico_c las la-link"></i>
+                                    <a class="desc_c" href="#">
+                                        CODECOLCIENCIAS
+                                    </a>
+                                </div>
+                                <div class=" pr_card_info__item pr_card__info__facultad">
+                                    <i class="ico_c las la-graduation-cap"></i>
+                                    <p class="desc_c" href="#">
+                                        Facultad de derecho
+                                    </p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card__info__dedication">
+                                    <i class="ico_c las la-user-check"></i>
+                                    <p class="desc_c" href="#">
+                                        Tiempo parcial
+                                    </p>
+                                </div>
+                                <div class="pr_card_info__action">Ver más <i class="ico_action las la-arrow-right"></i></div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="prof-list-item col-xs-12 col-sm-4 col-md-4 card-wrapper">
+                    <article class="pr_card card-principal">
+                        <div class="pr_card__image">
+                            <div class="pr_card__bg">
+                                <div class="pr_clip_art"></div>
+                            </div>
+                            <figure><img alt="Ejemplo Profesor Local" title="Ejemplo Profesor Local"
+                                src="https://academia.uniandes.edu.co/WebServicesAcademy/api/AcademyImages/photos/10253.JPG"
+                                onerror="this.src = 'https://plantillatest.uniandes.edu.co/sites/all/modules/custom/uniandes_prof_api/assets/img/nophoto.png';">
+                        </figure>
+                        </div>
+                        <div class="pr_main_content">
+                            <div class="card-info pr_card__info">
+                                <div class="pr_card_info__nombre" data-keyword="ejemplo profesor local">Henry Bernard Smit Kindermann</div>
+                                <div class="pr_card_info__title">
+                                    <i class="ico_c las la-award"></i>
+                                    <p class="desc_c">Doutor em Engenharia Electrotecnica e Computadores</p>  
+                                </div>
+                                <div class="pr_card_info__email pr_card_info__item">
+                                    <i class="ico_c las la-envelope"></i>
+                                    <p class="desc_c">cs.sanchezr@uniandes.edu.co </p>
+                                </div>
+                                <div class="pr_card_info__role pr_card_info__item">
+                                    <i class="ico_c las la-id-card-alt"></i>
+                                    <p class="desc_c">Profesor Titular Emérito</p>
+                                </div>
+                                <div class=" pr_card_info__item">
+                                    <i class="ico_c las la-mars"></i>
+                                    <p class="desc_c">Hombre</p>
+                                </div>
+                                <div class=" pr_card_info__item">
+                                    <i class="ico_c  las la-venus"></i>
+                                    <p class="desc_c">Mujer</p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card_info__extension">
+                                    <i class="ico_c las la-tty"></i>
+                                    <p class="desc_c">Extensión: 790</p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card_info__oficina">
+                                    <i class="ico_c las la-city"></i>
+                                    <p class="desc_c">Oficina: RBCG 334</p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card_info__peingles">
+                                    <i class="ico_c las la-quote-left"></i>
+                                    <p class="desc_c">
+                                        Licensed Attorney with expertise in Private Law. Main fields of interest: Civil and Commercial Law, Obligations, Contracts, Civil Liability, Business Law Legal history
+                                    </p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card_info__pespanol">
+                                    <i class="ico_c las la-quote-left"></i>
+                                    <p class="desc_c">
+                                        Abogada con énfasis en Derecho Privado. Áreas de interés: Derecho Civil y Comercial, Obligaciones, Contratos, Responsabilidad civil, Derecho de los Negocios, Historia del Derecho.   
+                                    </p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card__info_idtype">
+                                    <i class="ico_c las la-link"></i>
+                                    <a class="desc_c" href="#">
+                                        CODECOLCIENCIAS
+                                    </a>
+                                </div>
+                                <div class=" pr_card_info__item pr_card__info__facultad">
+                                    <i class="ico_c las la-graduation-cap"></i>
+                                    <p class="desc_c" href="#">
+                                        Facultad de derecho
+                                    </p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card__info__dedication">
+                                    <i class="ico_c las la-user-check"></i>
+                                    <p class="desc_c" href="#">
+                                        Tiempo parcial
+                                    </p>
+                                </div>
+                                <div class="pr_card_info__action">Ver más <i class="ico_action las la-arrow-right"></i></div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="prof-list-item col-xs-12 col-sm-4 col-md-4 card-wrapper">
+                    <article class="pr_card card-principal">
+                        <div class="pr_card__image">
+                            <div class="pr_card__bg">
+                                <div class="pr_clip_art"></div>
+                            </div>
+                            <figure><img alt="Ejemplo Profesor Local" title="Ejemplo Profesor Local"
+                                src="https://academia.uniandes.edu.co/WebServicesAcademy/api/AcademyImages/photos/10253.JPG"
+                                onerror="this.src = 'https://plantillatest.uniandes.edu.co/sites/all/modules/custom/uniandes_prof_api/assets/img/nophoto.png';">
+                        </figure>
+                        </div>
+                        <div class="pr_main_content">
+                            <div class="card-info pr_card__info">
+                                <div class="pr_card_info__nombre" data-keyword="ejemplo profesor local">Henry Bernard Smit Kindermann</div>
+                                <div class="pr_card_info__title">
+                                    <i class="ico_c las la-award"></i>
+                                    <p class="desc_c">Doutor em Engenharia Electrotecnica e Computadores</p>  
+                                </div>
+                                <div class="pr_card_info__email pr_card_info__item">
+                                    <i class="ico_c las la-envelope"></i>
+                                    <p class="desc_c">cs.sanchezr@uniandes.edu.co </p>
+                                </div>
+                                <div class="pr_card_info__role pr_card_info__item">
+                                    <i class="ico_c las la-id-card-alt"></i>
+                                    <p class="desc_c">Profesor Titular Emérito</p>
+                                </div>
+                                <div class=" pr_card_info__item">
+                                    <i class="ico_c las la-mars"></i>
+                                    <p class="desc_c">Hombre</p>
+                                </div>
+                                <div class=" pr_card_info__item">
+                                    <i class="ico_c  las la-venus"></i>
+                                    <p class="desc_c">Mujer</p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card_info__extension">
+                                    <i class="ico_c las la-tty"></i>
+                                    <p class="desc_c">Extensión: 790</p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card_info__oficina">
+                                    <i class="ico_c las la-city"></i>
+                                    <p class="desc_c">Oficina: RBCG 334</p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card_info__peingles">
+                                    <i class="ico_c las la-quote-left"></i>
+                                    <p class="desc_c">
+                                        Licensed Attorney with expertise in Private Law. Main fields of interest: Civil and Commercial Law, Obligations, Contracts, Civil Liability, Business Law Legal history
+                                    </p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card_info__pespanol">
+                                    <i class="ico_c las la-quote-left"></i>
+                                    <p class="desc_c">
+                                        Abogada con énfasis en Derecho Privado. Áreas de interés: Derecho Civil y Comercial, Obligaciones, Contratos, Responsabilidad civil, Derecho de los Negocios, Historia del Derecho.   
+                                    </p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card__info_idtype">
+                                    <i class="ico_c las la-link"></i>
+                                    <a class="desc_c" href="#">
+                                        CODECOLCIENCIAS
+                                    </a>
+                                </div>
+                                <div class=" pr_card_info__item pr_card__info__facultad">
+                                    <i class="ico_c las la-graduation-cap"></i>
+                                    <p class="desc_c" href="#">
+                                        Facultad de derecho
+                                    </p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card__info__dedication">
+                                    <i class="ico_c las la-user-check"></i>
+                                    <p class="desc_c" href="#">
+                                        Tiempo parcial
+                                    </p>
+                                </div>
+                                <div class="pr_card_info__action">Ver más <i class="ico_action las la-arrow-right"></i></div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="prof-list-item col-xs-12 col-sm-4 col-md-4 card-wrapper">
+                    <article class="pr_card card-principal">
+                        <div class="pr_card__image">
+                            <div class="pr_card__bg">
+                                <div class="pr_clip_art"></div>
+                            </div>
+                            <figure><img alt="Ejemplo Profesor Local" title="Ejemplo Profesor Local"
+                                src="https://academia.uniandes.edu.co/WebServicesAcademy/api/AcademyImages/photos/10253.JPG"
+                                onerror="this.src = 'https://plantillatest.uniandes.edu.co/sites/all/modules/custom/uniandes_prof_api/assets/img/nophoto.png';">
+                        </figure>
+                        </div>
+                        <div class="pr_main_content">
+                            <div class="card-info pr_card__info">
+                                <div class="pr_card_info__nombre" data-keyword="ejemplo profesor local">Henry Bernard Smit Kindermann</div>
+                                <div class="pr_card_info__title">
+                                    <i class="ico_c las la-award"></i>
+                                    <p class="desc_c">Doutor em Engenharia Electrotecnica e Computadores</p>  
+                                </div>
+                                <div class="pr_card_info__email pr_card_info__item">
+                                    <i class="ico_c las la-envelope"></i>
+                                    <p class="desc_c">cs.sanchezr@uniandes.edu.co </p>
+                                </div>
+                                <div class="pr_card_info__role pr_card_info__item">
+                                    <i class="ico_c las la-id-card-alt"></i>
+                                    <p class="desc_c">Profesor Titular Emérito</p>
+                                </div>
+                                <div class=" pr_card_info__item">
+                                    <i class="ico_c las la-mars"></i>
+                                    <p class="desc_c">Hombre</p>
+                                </div>
+                                <div class=" pr_card_info__item">
+                                    <i class="ico_c  las la-venus"></i>
+                                    <p class="desc_c">Mujer</p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card_info__extension">
+                                    <i class="ico_c las la-tty"></i>
+                                    <p class="desc_c">Extensión: 790</p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card_info__oficina">
+                                    <i class="ico_c las la-city"></i>
+                                    <p class="desc_c">Oficina: RBCG 334</p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card_info__peingles">
+                                    <i class="ico_c las la-quote-left"></i>
+                                    <p class="desc_c">
+                                        Licensed Attorney with expertise in Private Law. Main fields of interest: Civil and Commercial Law, Obligations, Contracts, Civil Liability, Business Law Legal history
+                                    </p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card_info__pespanol">
+                                    <i class="ico_c las la-quote-left"></i>
+                                    <p class="desc_c">
+                                        Abogada con énfasis en Derecho Privado. Áreas de interés: Derecho Civil y Comercial, Obligaciones, Contratos, Responsabilidad civil, Derecho de los Negocios, Historia del Derecho.   
+                                    </p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card__info_idtype">
+                                    <i class="ico_c las la-link"></i>
+                                    <a class="desc_c" href="#">
+                                        CODECOLCIENCIAS
+                                    </a>
+                                </div>
+                                <div class=" pr_card_info__item pr_card__info__facultad">
+                                    <i class="ico_c las la-graduation-cap"></i>
+                                    <p class="desc_c" href="#">
+                                        Facultad de derecho
+                                    </p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card__info__dedication">
+                                    <i class="ico_c las la-user-check"></i>
+                                    <p class="desc_c" href="#">
+                                        Tiempo parcial
+                                    </p>
+                                </div>
+                                <div class="pr_card_info__action">Ver más <i class="ico_action las la-arrow-right"></i></div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="prof-list-item col-xs-12 col-sm-4 col-md-4 card-wrapper">
+                    <article class="pr_card card-principal">
+                        <div class="pr_card__image">
+                            <div class="pr_card__bg">
+                                <div class="pr_clip_art"></div>
+                            </div>
+                            <figure><img alt="Ejemplo Profesor Local" title="Ejemplo Profesor Local"
+                                src="https://academia.uniandes.edu.co/WebServicesAcademy/api/AcademyImages/photos/10253.JPG"
+                                onerror="this.src = 'https://plantillatest.uniandes.edu.co/sites/all/modules/custom/uniandes_prof_api/assets/img/nophoto.png';">
+                        </figure>
+                        </div>
+                        <div class="pr_main_content">
+                            <div class="card-info pr_card__info">
+                                <div class="pr_card_info__nombre" data-keyword="ejemplo profesor local">Henry Bernard Smit Kindermann</div>
+                                <div class="pr_card_info__title">
+                                    <i class="ico_c las la-award"></i>
+                                    <p class="desc_c">Doutor em Engenharia Electrotecnica e Computadores</p>  
+                                </div>
+                                <div class="pr_card_info__email pr_card_info__item">
+                                    <i class="ico_c las la-envelope"></i>
+                                    <p class="desc_c">cs.sanchezr@uniandes.edu.co </p>
+                                </div>
+                                <div class="pr_card_info__role pr_card_info__item">
+                                    <i class="ico_c las la-id-card-alt"></i>
+                                    <p class="desc_c">Profesor Titular Emérito</p>
+                                </div>
+                                <div class=" pr_card_info__item">
+                                    <i class="ico_c las la-mars"></i>
+                                    <p class="desc_c">Hombre</p>
+                                </div>
+                                <div class=" pr_card_info__item">
+                                    <i class="ico_c  las la-venus"></i>
+                                    <p class="desc_c">Mujer</p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card_info__extension">
+                                    <i class="ico_c las la-tty"></i>
+                                    <p class="desc_c">Extensión: 790</p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card_info__oficina">
+                                    <i class="ico_c las la-city"></i>
+                                    <p class="desc_c">Oficina: RBCG 334</p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card_info__peingles">
+                                    <i class="ico_c las la-quote-left"></i>
+                                    <p class="desc_c">
+                                        Licensed Attorney with expertise in Private Law. Main fields of interest: Civil and Commercial Law, Obligations, Contracts, Civil Liability, Business Law Legal history
+                                    </p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card_info__pespanol">
+                                    <i class="ico_c las la-quote-left"></i>
+                                    <p class="desc_c">
+                                        Abogada con énfasis en Derecho Privado. Áreas de interés: Derecho Civil y Comercial, Obligaciones, Contratos, Responsabilidad civil, Derecho de los Negocios, Historia del Derecho.   
+                                    </p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card__info_idtype">
+                                    <i class="ico_c las la-link"></i>
+                                    <a class="desc_c" href="#">
+                                        CODECOLCIENCIAS
+                                    </a>
+                                </div>
+                                <div class=" pr_card_info__item pr_card__info__facultad">
+                                    <i class="ico_c las la-graduation-cap"></i>
+                                    <p class="desc_c" href="#">
+                                        Facultad de derecho
+                                    </p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card__info__dedication">
+                                    <i class="ico_c las la-user-check"></i>
+                                    <p class="desc_c" href="#">
+                                        Tiempo parcial
+                                    </p>
+                                </div>
+                                <div class="pr_card_info__action">Ver más <i class="ico_action las la-arrow-right"></i></div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="prof-list-item col-xs-12 col-sm-4 col-md-4 card-wrapper l-E type-158 cursor" data-l="E"
+                data-type="158" data-url="https://plantillatest.uniandes.edu.co/es/ejemplo-profesor-local">
+                <article class="pr_card card-principal">
+                    <div class="pr_card__image">
+                        <div class="pr_card__bg">
+                            <div class="pr_clip_art"></div>
+                        </div>
+                        <figure><img alt="Ejemplo Profesor Local" title="Ejemplo Profesor Local"
+                            src="assets/img/nophoto.png"
+                            onerror="this.src = 'https://plantillatest.uniandes.edu.co/sites/all/modules/custom/uniandes_prof_api/assets/img/nophoto.png';">
+                    </figure>
+                    </div>
+                    <div class="pr_main_content">
+                        <div class="card-info pr_card__info">
+                            <div class="pr_card_info__nombre" data-keyword="ejemplo profesor local">
+                                Monica Viviana Pinilla Roncancio
+                            </div>
+                            <div class="pr_card_info__title">
+                                <i class="ico_c las la-award"></i>
+                                <p class="desc_c">Docteur De L'Institut National Polytechnique De Grenoble Genie Electrique</p>  
+                            </div>
+                            <div class="pr_card_info__email pr_card_info__item">
+                                <i class="ico_c las la-envelope"></i>
+                                <p class="desc_c">cs.sanchezr@uniandes.edu.co </p>
+                            </div>
+                            <div class="pr_card_info__role pr_card_info__item">
+                                <i class="ico_c las la-id-card-alt"></i>
+                                <p class="desc_c">Profesor Titular Emérito</p>
+                            </div>
+                            <div class="pr_card_info__action">Ver más <i class="ico_action las la-arrow-right"></i></div>
+                        </div>
+                    </div>
+                </article>
+                </div>
+                <div class="prof-list-item col-xs-12 col-sm-4 col-md-4 card-wrapper">
+                    <article class="pr_card card-principal">
+                        <div class="pr_card__image">
+                            <div class="pr_card__bg">
+                                <div class="pr_clip_art"></div>
+                            </div>
+                            <figure><img alt="Ejemplo Profesor Local" title="Ejemplo Profesor Local"
+                                src="https://academia.uniandes.edu.co/WebServicesAcademy/api/AcademyImages/photos/10253.JPG"
+                                onerror="this.src = 'https://plantillatest.uniandes.edu.co/sites/all/modules/custom/uniandes_prof_api/assets/img/nophoto.png';">
+                        </figure>
+                        </div>
+                        <div class="pr_main_content">
+                            <div class="card-info pr_card__info">
+                                <div class="pr_card_info__nombre" data-keyword="ejemplo profesor local">Henry Bernard Smit Kindermann</div>
+                                <div class="pr_card_info__title">
+                                    <i class="ico_c las la-award"></i>
+                                    <p class="desc_c">Doutor em Engenharia Electrotecnica e Computadores</p>  
+                                </div>
+                                <div class="pr_card_info__email pr_card_info__item">
+                                    <i class="ico_c las la-envelope"></i>
+                                    <p class="desc_c">cs.sanchezr@uniandes.edu.co </p>
+                                </div>
+                                <div class="pr_card_info__role pr_card_info__item">
+                                    <i class="ico_c las la-id-card-alt"></i>
+                                    <p class="desc_c">Profesor Titular Emérito</p>
+                                </div>
+                                <div class=" pr_card_info__item">
+                                    <i class="ico_c las la-mars"></i>
+                                    <p class="desc_c">Hombre</p>
+                                </div>
+                                <div class=" pr_card_info__item">
+                                    <i class="ico_c  las la-venus"></i>
+                                    <p class="desc_c">Mujer</p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card_info__extension">
+                                    <i class="ico_c las la-tty"></i>
+                                    <p class="desc_c">Extensión: 790</p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card_info__oficina">
+                                    <i class="ico_c las la-city"></i>
+                                    <p class="desc_c">Oficina: RBCG 334</p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card_info__peingles">
+                                    <i class="ico_c las la-quote-left"></i>
+                                    <p class="desc_c">
+                                        Licensed Attorney with expertise in Private Law. Main fields of interest: Civil and Commercial Law, Obligations, Contracts, Civil Liability, Business Law Legal history
+                                    </p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card_info__pespanol">
+                                    <i class="ico_c las la-quote-left"></i>
+                                    <p class="desc_c">
+                                        Abogada con énfasis en Derecho Privado. Áreas de interés: Derecho Civil y Comercial, Obligaciones, Contratos, Responsabilidad civil, Derecho de los Negocios, Historia del Derecho.   
+                                    </p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card__info_idtype">
+                                    <i class="ico_c las la-link"></i>
+                                    <a class="desc_c" href="#">
+                                        CODECOLCIENCIAS
+                                    </a>
+                                </div>
+                                <div class=" pr_card_info__item pr_card__info__facultad">
+                                    <i class="ico_c las la-graduation-cap"></i>
+                                    <p class="desc_c" href="#">
+                                        Facultad de derecho
+                                    </p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card__info__dedication">
+                                    <i class="ico_c las la-user-check"></i>
+                                    <p class="desc_c" href="#">
+                                        Tiempo parcial
+                                    </p>
+                                </div>
+                                <div class="pr_card_info__action">Ver más <i class="ico_action las la-arrow-right"></i></div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="prof-list-item col-xs-12 col-sm-4 col-md-4 card-wrapper">
+                    <article class="pr_card card-principal">
+                        <div class="pr_card__image">
+                            <div class="pr_card__bg">
+                                <div class="pr_clip_art"></div>
+                            </div>
+                            <figure><img alt="Ejemplo Profesor Local" title="Ejemplo Profesor Local"
+                                src="https://academia.uniandes.edu.co/WebServicesAcademy/api/AcademyImages/photos/10253.JPG"
+                                onerror="this.src = 'https://plantillatest.uniandes.edu.co/sites/all/modules/custom/uniandes_prof_api/assets/img/nophoto.png';">
+                        </figure>
+                        </div>
+                        <div class="pr_main_content">
+                            <div class="card-info pr_card__info">
+                                <div class="pr_card_info__nombre" data-keyword="ejemplo profesor local">Henry Bernard Smit Kindermann</div>
+                                <div class="pr_card_info__title">
+                                    <i class="ico_c las la-award"></i>
+                                    <p class="desc_c">Doutor em Engenharia Electrotecnica e Computadores</p>  
+                                </div>
+                                <div class="pr_card_info__email pr_card_info__item">
+                                    <i class="ico_c las la-envelope"></i>
+                                    <p class="desc_c">cs.sanchezr@uniandes.edu.co </p>
+                                </div>
+                                <div class="pr_card_info__role pr_card_info__item">
+                                    <i class="ico_c las la-id-card-alt"></i>
+                                    <p class="desc_c">Profesor Titular Emérito</p>
+                                </div>
+                                <div class=" pr_card_info__item">
+                                    <i class="ico_c las la-mars"></i>
+                                    <p class="desc_c">Hombre</p>
+                                </div>
+                                <div class=" pr_card_info__item">
+                                    <i class="ico_c  las la-venus"></i>
+                                    <p class="desc_c">Mujer</p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card_info__extension">
+                                    <i class="ico_c las la-tty"></i>
+                                    <p class="desc_c">Extensión: 790</p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card_info__oficina">
+                                    <i class="ico_c las la-city"></i>
+                                    <p class="desc_c">Oficina: RBCG 334</p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card_info__peingles">
+                                    <i class="ico_c las la-quote-left"></i>
+                                    <p class="desc_c">
+                                        Licensed Attorney with expertise in Private Law. Main fields of interest: Civil and Commercial Law, Obligations, Contracts, Civil Liability, Business Law Legal history
+                                    </p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card_info__pespanol">
+                                    <i class="ico_c las la-quote-left"></i>
+                                    <p class="desc_c">
+                                        Abogada con énfasis en Derecho Privado. Áreas de interés: Derecho Civil y Comercial, Obligaciones, Contratos, Responsabilidad civil, Derecho de los Negocios, Historia del Derecho.   
+                                    </p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card__info_idtype">
+                                    <i class="ico_c las la-link"></i>
+                                    <a class="desc_c" href="#">
+                                        CODECOLCIENCIAS
+                                    </a>
+                                </div>
+                                <div class=" pr_card_info__item pr_card__info__facultad">
+                                    <i class="ico_c las la-graduation-cap"></i>
+                                    <p class="desc_c" href="#">
+                                        Facultad de derecho
+                                    </p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card__info__dedication">
+                                    <i class="ico_c las la-user-check"></i>
+                                    <p class="desc_c" href="#">
+                                        Tiempo parcial
+                                    </p>
+                                </div>
+                                <div class="pr_card_info__action">Ver más <i class="ico_action las la-arrow-right"></i></div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="prof-list-item col-xs-12 col-sm-4 col-md-4 card-wrapper">
+                    <article class="pr_card card-principal">
+                        <div class="pr_card__image">
+                            <div class="pr_card__bg">
+                                <div class="pr_clip_art"></div>
+                            </div>
+                            <figure><img alt="Ejemplo Profesor Local" title="Ejemplo Profesor Local"
+                                src="https://academia.uniandes.edu.co/WebServicesAcademy/api/AcademyImages/photos/10253.JPG"
+                                onerror="this.src = 'https://plantillatest.uniandes.edu.co/sites/all/modules/custom/uniandes_prof_api/assets/img/nophoto.png';">
+                        </figure>
+                        </div>
+                        <div class="pr_main_content">
+                            <div class="card-info pr_card__info">
+                                <div class="pr_card_info__nombre" data-keyword="ejemplo profesor local">Henry Bernard Smit Kindermann</div>
+                                <div class="pr_card_info__title">
+                                    <i class="ico_c las la-award"></i>
+                                    <p class="desc_c">Doutor em Engenharia Electrotecnica e Computadores</p>  
+                                </div>
+                                <div class="pr_card_info__email pr_card_info__item">
+                                    <i class="ico_c las la-envelope"></i>
+                                    <p class="desc_c">cs.sanchezr@uniandes.edu.co </p>
+                                </div>
+                                <div class="pr_card_info__role pr_card_info__item">
+                                    <i class="ico_c las la-id-card-alt"></i>
+                                    <p class="desc_c">Profesor Titular Emérito</p>
+                                </div>
+                                <div class=" pr_card_info__item">
+                                    <i class="ico_c las la-mars"></i>
+                                    <p class="desc_c">Hombre</p>
+                                </div>
+                                <div class=" pr_card_info__item">
+                                    <i class="ico_c  las la-venus"></i>
+                                    <p class="desc_c">Mujer</p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card_info__extension">
+                                    <i class="ico_c las la-tty"></i>
+                                    <p class="desc_c">Extensión: 790</p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card_info__oficina">
+                                    <i class="ico_c las la-city"></i>
+                                    <p class="desc_c">Oficina: RBCG 334</p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card_info__peingles">
+                                    <i class="ico_c las la-quote-left"></i>
+                                    <p class="desc_c">
+                                        Licensed Attorney with expertise in Private Law. Main fields of interest: Civil and Commercial Law, Obligations, Contracts, Civil Liability, Business Law Legal history
+                                    </p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card_info__pespanol">
+                                    <i class="ico_c las la-quote-left"></i>
+                                    <p class="desc_c">
+                                        Abogada con énfasis en Derecho Privado. Áreas de interés: Derecho Civil y Comercial, Obligaciones, Contratos, Responsabilidad civil, Derecho de los Negocios, Historia del Derecho.   
+                                    </p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card__info_idtype">
+                                    <i class="ico_c las la-link"></i>
+                                    <a class="desc_c" href="#">
+                                        CODECOLCIENCIAS
+                                    </a>
+                                </div>
+                                <div class=" pr_card_info__item pr_card__info__facultad">
+                                    <i class="ico_c las la-graduation-cap"></i>
+                                    <p class="desc_c" href="#">
+                                        Facultad de derecho
+                                    </p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card__info__dedication">
+                                    <i class="ico_c las la-user-check"></i>
+                                    <p class="desc_c" href="#">
+                                        Tiempo parcial
+                                    </p>
+                                </div>
+                                <div class="pr_card_info__action">Ver más <i class="ico_action las la-arrow-right"></i></div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="prof-list-item col-xs-12 col-sm-4 col-md-4 card-wrapper">
+                    <article class="pr_card card-principal">
+                        <div class="pr_card__image">
+                            <div class="pr_card__bg">
+                                <div class="pr_clip_art"></div>
+                            </div>
+                            <figure><img alt="Ejemplo Profesor Local" title="Ejemplo Profesor Local"
+                                src="https://academia.uniandes.edu.co/WebServicesAcademy/api/AcademyImages/photos/10253.JPG"
+                                onerror="this.src = 'https://plantillatest.uniandes.edu.co/sites/all/modules/custom/uniandes_prof_api/assets/img/nophoto.png';">
+                        </figure>
+                        </div>
+                        <div class="pr_main_content">
+                            <div class="card-info pr_card__info">
+                                <div class="pr_card_info__nombre" data-keyword="ejemplo profesor local">Henry Bernard Smit Kindermann</div>
+                                <div class="pr_card_info__title">
+                                    <i class="ico_c las la-award"></i>
+                                    <p class="desc_c">Doutor em Engenharia Electrotecnica e Computadores</p>  
+                                </div>
+                                <div class="pr_card_info__email pr_card_info__item">
+                                    <i class="ico_c las la-envelope"></i>
+                                    <p class="desc_c">cs.sanchezr@uniandes.edu.co </p>
+                                </div>
+                                <div class="pr_card_info__role pr_card_info__item">
+                                    <i class="ico_c las la-id-card-alt"></i>
+                                    <p class="desc_c">Profesor Titular Emérito</p>
+                                </div>
+                                <div class=" pr_card_info__item">
+                                    <i class="ico_c las la-mars"></i>
+                                    <p class="desc_c">Hombre</p>
+                                </div>
+                                <div class=" pr_card_info__item">
+                                    <i class="ico_c  las la-venus"></i>
+                                    <p class="desc_c">Mujer</p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card_info__extension">
+                                    <i class="ico_c las la-tty"></i>
+                                    <p class="desc_c">Extensión: 790</p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card_info__oficina">
+                                    <i class="ico_c las la-city"></i>
+                                    <p class="desc_c">Oficina: RBCG 334</p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card_info__peingles">
+                                    <i class="ico_c las la-quote-left"></i>
+                                    <p class="desc_c">
+                                        Licensed Attorney with expertise in Private Law. Main fields of interest: Civil and Commercial Law, Obligations, Contracts, Civil Liability, Business Law Legal history
+                                    </p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card_info__pespanol">
+                                    <i class="ico_c las la-quote-left"></i>
+                                    <p class="desc_c">
+                                        Abogada con énfasis en Derecho Privado. Áreas de interés: Derecho Civil y Comercial, Obligaciones, Contratos, Responsabilidad civil, Derecho de los Negocios, Historia del Derecho.   
+                                    </p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card__info_idtype">
+                                    <i class="ico_c las la-link"></i>
+                                    <a class="desc_c" href="#">
+                                        CODECOLCIENCIAS
+                                    </a>
+                                </div>
+                                <div class=" pr_card_info__item pr_card__info__facultad">
+                                    <i class="ico_c las la-graduation-cap"></i>
+                                    <p class="desc_c" href="#">
+                                        Facultad de derecho
+                                    </p>
+                                </div>
+                                <div class=" pr_card_info__item pr_card__info__dedication">
+                                    <i class="ico_c las la-user-check"></i>
+                                    <p class="desc_c" href="#">
+                                        Tiempo parcial
+                                    </p>
+                                </div>
+                                <div class="pr_card_info__action">Ver más <i class="ico_action las la-arrow-right"></i></div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+             </div>
+        </div>
+      </div>
+
+            <!--     BUTTON TO TOP      -->
+    <a id="toTop">
+        <i class="las la-arrow-up"></i>
+    </a>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+.main_teach {
+    padding-top: 10%;
+    &::after,
+    &::before
+    {
+        display: table;
+        content: '';
+        clear: both;
+    }
+}
