@@ -10,15 +10,18 @@
     }
 }
 .title_icon {
+    float: left;
+    width: 100%;
     .ico_middle {
         width: 5%;
         float: left;
-        font-size: 23px;
+        font-size: 30px;
     }
     .text_middle {
         width: 95%;
         float: left;
-        font-size: 30px;
+        font-size: 28px;
+        font-weight: 400;
     }
 }
 
@@ -168,18 +171,125 @@
                 }
             }
             .content-box {
-                padding: 40px;
+                padding: 20px 40px;
                 .box_basic_info__row {
                     padding: 31px 0px;
                     border-bottom: 1px solid #c3c1c1;
                     .title-descripcion {
                         @extend .title_icon;
-                        .ico_middle {
-
+                        margin-bottom: 15px;
+                    }
+                    .timeline {
+                        clear: both;
+                        .item_timeline {
+                            list-style: none;
                         }
-                        .text_middle {
-
+                        &__content {
+                            float: left;
+                            height: 100%;
+                            background-color: #f3f1f1;
+                            list-style: none;
+                            border-radius: 8px;
+                            padding: 20px;
+                            margin-right: 15px;
+                            border: 1px solid #eae4e4;
+                            width: 45%;
+                            position: relative;
+                            overflow: hidden;
+                            &::before {
+                                content: "";
+                                width: 300px;
+                                position: absolute;
+                                top: -127px;
+                                background-size: contain;
+                                background-repeat: no-repeat;
+                                height: 189px;
+                                right: -48%;
+                                background-image: url(../assets/img/tCircles.png);
+                            }
                         }
+                        &__year {
+                            width: 9%;
+                            margin-bottom: 20px;
+                            display: flex;
+                            justify-content: center;
+                            padding: 5px;
+                            background-color: #fcea7e;
+                            font-weight: bold;
+                        }
+                    }
+                    .action_mas {
+                        display: flex;
+                        justify-content: center;
+                        width: 100%;
+                        &__btn {
+                            padding: 9px;
+                            width: 141px;
+                            text-align: center;
+                            margin-top: 21px;
+                            border: 1px solid #b8860b;
+                            color: #ffffff;
+                            transition: all .2s linear;
+                            font-weight: lighter  ;
+                            border-radius: 36px;
+                            background-color: darkgoldenrod;
+                            @include shadow_element(rgba(184, 135, 11, 0.335));
+                            &:hover {
+                                opacity: .8;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                    .card_prf {
+                        margin-bottom: 20px;
+                        &__contenedor {
+                            display: flex;
+                            background-color: #f3f1f1;
+                            width: 100%;
+                            border-radius: 8px;
+                            border: 1px solid #eae4e4;
+                        }
+                        &__icon {
+                            width: 20%;
+                            float: left;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            position: relative;
+                            overflow: hidden;
+                            .icontipo {
+                                font-size: 60px;
+                                z-index: 1;
+                            }
+                            &::before {
+                                position: absolute;
+                                content: "";
+                                background-position-y: 14px;
+                                width: 100px;
+                                background-repeat: no-repeat;
+                                background-size: contain;
+                                height: 200px;
+                                background-image: url(../assets/img/tCircles.png);
+                            }
+                        }
+                        &__content {
+                            padding: 24px;
+                            width: 80%;
+                            float: left;
+                            .prfc_row {
+                                &__name {
+                                    font-size: 19px;
+                                }
+                            }
+                        } 
+                        &_action {
+                            margin-top: 10px;
+                            &__badge {
+                                padding: 5px;
+                                border: 1px solid rgba(0, 128, 128, 0.3607843137254902);
+                                color: teal;
+                            }
+                        }  
                     }
                 }
             }
