@@ -16,6 +16,16 @@ jQuery(document).ready(function() {
       jQuery(".prof__container").removeClass("pr_item__top pr_item__left");
       break; 
   }
+  switch (localStorage.getItem("tema")) {
+    case "material":
+      jQuery(".prof__container").addClass("prof_style__material");
+      jQuery(".prof__container").removeClass("prof_style__classic");
+      break;
+    case "clasico":
+      jQuery(".prof__container").addClass("prof_style__classic");
+      jQuery(".prof__container").removeClass("prof_style__materialp");
+      break;  
+  }
   if(jQuery(".pr_item__left").length > 0) {
     toSide();
     var sticky = new Sticky('.pr_item__left .sticky--side');
@@ -75,6 +85,22 @@ jQuery(document).ready(function() {
     var sticky = new Sticky('.pr_item__right .sticky--side');
     jQuery(".container_filters .btn-group-bd .btn-group-bd__icon").removeClass("la-long-arrow-alt-right").addClass("la-long-arrow-alt-left");
   }
+
+  if(jQuery(".prof_style__material").length > 0 ) {
+    $.ripple('.btn_option.minimal', {
+         debug: true
+    });
+    jQuery("#input-search-string").focusin(  
+      function(){  
+        jQuery(".container_filters__query .filter_row__label").addClass("focus-active");
+
+      }).focusout(  
+      function(){  
+        jQuery(".container_filters__query .filter_row__label").removeClass("focus-active");
+
+      });
+
+  }
     
   function toSide() {
     jQuery(".prof__container .container_filters").addClass("col-xs-12 col-sm-2 col-md-3 col-lg-3");
@@ -105,7 +131,12 @@ jQuery(document).ready(function() {
       var posicion = jQuery(this).attr("data-position");
       localStorage.setItem("posicion", posicion);
       location.reload();
-    })
+    });
+    jQuery("a[data-tema]").click(function(){
+      var tema = jQuery(this).attr("data-tema");
+      localStorage.setItem("tema", tema);
+      location.reload();
+    });
 
     // --------------------------------
     //      SCROLL TO TOP

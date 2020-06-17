@@ -19,6 +19,8 @@
     <script src="js/prof.js"></script>
     <link rel="stylesheet" href="assets/icons/theme_classic/css/import-icons.css">
     <script src="assets/plugin/js/sticky.js"></script>
+    <script src="assets/plugin/js/ripple.js"></script>
+    <link rel="stylesheet" href="assets/plugin/css/ripple.css">
 </head>
 
 <body>
@@ -32,9 +34,9 @@
                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">Tema<span class="caret"></span></button>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Clasico</a></li>
-                        <li><a href="#">Material</a></li>
-                        <li><a href="#">Dark</a></li>
+                        <li><a href="#" data-tema="clasico">Clasico</a></li>
+                        <li><a href="#" data-tema="material">Material</a></li>
+                        <li><a href="#" data-tema="oscuro">Dark</a></li>
                 </div>
                 <div class="btn-group">
                     <button type="button" class="btn btn-default dropdown-toggle posicion__select" data-toggle="dropdown"
@@ -66,7 +68,7 @@
                         <label class="label-filter">Buscar por nombre</label>
                     </div>
                     <div class="filter_row filter_row__inp">
-                        <input type="text" value="" id="input-search-string">
+                        <input type="text"  data-color="auto" value="" id="input-search-string">
                         <i class="la la-search ico"></i>
                     </div>
                 </div>
