@@ -32,9 +32,9 @@
             }
         }
     }
-    .prof_list__main {
+    .prof_list__main .row {
         div[class*='col-md-4'] {
-            &:nth-child(4n) {
+            &:nth-of-type(3n+1)  {
                 clear: both;
             }
          }

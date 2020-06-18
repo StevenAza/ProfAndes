@@ -1,7 +1,7 @@
 
 
 jQuery(document).ready(function() {
-  const list = document.querySelectorAll(".list");
+
   switch (localStorage.getItem("posicion")) {
     case "arriba":
       jQuery(".prof__container").addClass("pr_item__top");
@@ -81,23 +81,26 @@ jQuery(document).ready(function() {
     });
   }
   if(jQuery(".pr_item__right").length > 0) {
+
     toSide();
     var sticky = new Sticky('.pr_item__right .sticky--side');
     jQuery(".container_filters .btn-group-bd .btn-group-bd__icon").removeClass("la-long-arrow-alt-right").addClass("la-long-arrow-alt-left");
   }
 
   if(jQuery(".prof_style__material").length > 0 ) {
-    $.ripple('.btn_option.minimal', {
-         debug: true
-    });
+    rippleCustom('.option_row .btn_option');
+    rippleCustom('a#toTop');
+    rippleCustom('.prof-list-item .pr_card__info');
+
     jQuery("#input-search-string").focusin(  
       function(){  
         jQuery(".container_filters__query .filter_row__label").addClass("focus-active");
 
       }).focusout(  
       function(){  
-        jQuery(".container_filters__query .filter_row__label").removeClass("focus-active");
-
+        if(jQuery(this).val() == "") {
+          jQuery(".container_filters__query .filter_row__label").removeClass("focus-active");
+        }
       });
 
   }
@@ -114,6 +117,10 @@ jQuery(document).ready(function() {
     jQuery(".container_filters .container_filters__options .option_row__mini label").text("Cuadrícula");
     jQuery(".container_filters .container_filters__options .option_row__mini .btn_option .ico_opt").removeClass("la-compress-arrows-alt").addClass("la-border-all");
     jQuery(".container_filters .type_row__inp .type_custom__select").remove();
+    var consticky = jQuery(".prof__container .container_filters .sticky--side").html();
+    jQuery(".prof__container .container_filters .sticky--side > div[class*='container_filters']").remove();
+    jQuery(".prof__container .container_filters .sticky--side").append("<div class='sticky_row'></div>");
+    jQuery(".sticky_row").append(consticky);
     jQuery(".option_row__fixed .btn_option").click(function () {
       jQuery(".prof__container .prof_list__main").addClass("is_list").removeClass("is_grid");
       jQuery(".prof__container .prof-list-item").removeClass("col-md-4 col-sm-4 col-lg-4").addClass("col-lg-12 col-md-12 col-sm-12");
@@ -153,9 +160,8 @@ jQuery(document).ready(function() {
       e.preventDefault();
       jQuery('html, body').animate({scrollTop:0}, '300');
     });
-
+    const list = document.querySelectorAll(".list");
     for (i = 0; i < list.length; i++) {
-      console.log("v:");
      list[i].addEventListener("click", accordion);
   }
   function accordion(e) {
@@ -173,7 +179,10 @@ jQuery(document).ready(function() {
   }
 });
 
-
-
-
+function rippleCustom(elem) {
+  window.rippler = $.ripple(elem, {
+    debug: true,
+    multi: true
+  });
+}
 
