@@ -19,12 +19,17 @@ jQuery(document).ready(function() {
   switch (localStorage.getItem("tema")) {
     case "material":
       jQuery(".prof__container").addClass("prof_style__material");
-      jQuery(".prof__container").removeClass("prof_style__classic");
+      jQuery(".prof__container").removeClass("prof_style__classic prof_style__dark");
       break;
     case "clasico":
       jQuery(".prof__container").addClass("prof_style__classic");
-      jQuery(".prof__container").removeClass("prof_style__materialp");
+      jQuery(".prof__container").removeClass("prof_style__material prof_style__dark");
+      break;
+    case "oscuro":
+      jQuery(".prof__container").addClass("prof_style__dark");
+      jQuery(".prof__container").removeClass("prof_style__material prof_style__classic");
       break;  
+       
   }
   if(jQuery(".pr_item__left").length > 0) {
     toSide();

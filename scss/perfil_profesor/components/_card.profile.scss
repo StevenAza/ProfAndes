@@ -1,0 +1,43 @@
+.card_prf {
+    margin-bottom: 20px;
+
+    &__contenedor {
+        display: flex;
+        width: 100%;
+    }
+
+    &__icon {
+        width: 20%;
+        float: left;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+
+        .icontipo {
+            font-size: 60px;
+            z-index: 1;
+        }
+    }
+
+    &__content {
+        padding: 24px;
+        width: 80%;
+        float: left;
+
+        .prfc_row {
+            &__name {
+                font-size: 19px;
+            }
+        }
+    }
+
+    &_action {
+        margin-top: 10px;
+
+        &__badge {
+            padding: 5px;
+        }
+    }
+}

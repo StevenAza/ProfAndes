@@ -35,7 +35,18 @@ $desktopxl:1930px;
     box-shadow: 0 5px 10px $color, 0 15px 40px $color;
     -moz-box-shadow:0 5px 10px $color, 0 15px 40px $color;
 }
-
+@mixin  neumophirsm-inset($color) {
+   //rgba(166,173,201,.2)
+   box-shadow: inset 10px 10px 20px $color, 
+            inset -10px -10px 20px darken($color, 10%);
+    
+}
+@mixin  neumophirsm($color, $bg) {
+    //rgba(166,173,201,.2)
+    background: linear-gradient(45deg, $bg, darken($bg, 10%));
+    @include shadow_element($color);
+     
+ }
 @mixin icon-content {
     font-family: 'Line Awesome Free';
     font-weight: 900;

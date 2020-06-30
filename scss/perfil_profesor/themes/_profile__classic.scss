@@ -1,0 +1,326 @@
+.divide_icon {
+    .text_divide {
+        width: 86%;
+        float: right;
+    }
+
+    .icon_divive {
+        width: 14%;
+        float: left;
+        font-size: 22px;
+    }
+}
+
+.title_icon {
+    float: left;
+    width: 100%;
+
+    .ico_middle {
+        width: 5%;
+        float: left;
+        font-size: 30px;
+    }
+
+    .text_middle {
+        width: 95%;
+        float: left;
+        font-size: 28px;
+        font-weight: 400;
+    }
+}
+
+.main_teach {
+    &.prof_style__classic {
+        @extend %prof-font;
+
+        .cont__header {
+            .prf_header--contenedor {
+                padding: 0px 20px;
+
+                .prf_header {
+                    min-height: 60vh;
+                    max-height: 90vh;
+                    height: auto;
+                    overflow: auto;
+
+                    padding: 14px 20px;
+                    background-color: rgb(255, 255, 255);
+                    border-radius: 10px;
+                    @include shadow_element(rgba(0, 0, 0, 0.2));
+
+                    &__image {
+                        margin-bottom: 18px;
+
+                        figure {
+                            img {
+                                border-radius: 50%;
+                                z-index: 1;
+                            }
+                        }
+
+                        .clipart {
+                            background-image: url(../assets/img/tCircles.png);
+                            background-size: cover;
+                            position: absolute;
+                            height: 300px;
+                            width: 300px;
+                            top: -119px;
+                            z-index: 1;
+                            right: 134px;
+                        }
+                    }
+
+                    &__info {
+                        .prinfo_row {
+                            &__name {
+                                p {
+                                    font-size: 26px;
+                                    line-height: 32px;
+                                }
+                            }
+
+                            &__title {
+                                @extend .divide_icon;
+
+                                .icon_divive {
+                                    color: #79571c;
+                                }
+
+                                .text_divide {
+                                    color: #79571c;
+                                }
+                            }
+                        }
+
+                        .prcontact_row {
+                            clear: both;
+                            margin-bottom: 35px;
+                            @extend .divide_icon;
+                        }
+                    }
+
+                    &::-webkit-scrollbar {
+                        width: 4px;
+                        height: 9px;
+                        background-color: rgba(109, 102, 102, 0.23);
+                        display: block;
+                    }
+
+                    &::-webkit-scrollbar-thumb {
+                        background: rgba(113, 110, 110, 0.8);
+                        border-radius: 12px;
+                    }
+
+                    &::-webkit-scrollbar-thumb:active {
+                        background: #626262;
+                    }
+
+                    &::-webkit-scrollbar-track {
+                        background: #b3b3b3;
+                        border-radius: 4px;
+                    }
+                }
+            }
+        }
+
+        .con__information {
+            @include shadow_element(rgba(0, 0, 0, 0.2));
+            padding: 0;
+
+            .cont__menu {
+                @include shadow_element(rgba(0, 0, 0, 0.137));
+                z-index: 3;
+                background-color: white;
+                padding: 0px;
+
+                .content-menu-filter {
+                    .content-filter-row {
+                        display: flex;
+                        justify-content: space-between;
+
+                        .row_tab {
+                            font-size: 16px;
+                            min-width: auto;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            height: 64px;
+                            width: 100%;
+                            align-items: center;
+                            position: relative;
+                            transition: all .3s linear;
+                            cursor: pointer;
+
+                            &__text {
+                                text-align: center;
+                            }
+
+                            &__icon {
+                                font-size: 22px;
+                            }
+
+                            &::before {
+                                content: "";
+                                transition: all .2s linear;
+                                position: absolute;
+                                bottom: 0;
+                                height: 3px;
+                                width: 0%;
+                                background: linear-gradient(40deg, #ffab83, #fcfc7d);
+                            }
+
+                            &.active,
+                            &:hover {
+                                transition: all .5s linear;
+                                background-color: rgba(255, 253, 206, 0.459);
+
+                                .row_tab {
+                                    &__text {
+                                        color: #79571c;
+                                    }
+
+                                    &__icon {
+                                        color: #79571c;
+                                    }
+
+                                }
+
+                                &::before {
+                                    content: "";
+                                    width: 77%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .profile__resume {
+                padding: 20px 40px;
+
+                .resume__container {
+                    padding: 31px 0px;
+                    border-bottom: 1px solid #c3c1c1;
+
+                    // -------------------------------------------------------
+                    //                 PANELS Y RESUMEN DEL PROFESOR
+                    // -------------------------------------------------------
+                    .resume_row {
+                        &__title {
+                            .title_resume_row {
+                                @extend .title_icon;
+                                margin-bottom: 15px;
+                            }
+                        }
+
+                        &__contenido {
+                            .timeline {
+                                clear: both;
+
+                                .item_timeline {
+                                    list-style: none;
+                                }
+
+                                &__content {
+                                    float: left;
+                                    height: 100%;
+                                    background-color: #f3f1f1;
+                                    list-style: none;
+                                    border-radius: 8px;
+                                    padding: 20px;
+                                    margin-right: 15px;
+                                    border: 1px solid #eae4e4;
+                                    width: 45%;
+                                    position: relative;
+                                    overflow: hidden;
+
+                                    &::before {
+                                        content: "";
+                                        width: 300px;
+                                        position: absolute;
+                                        top: -127px;
+                                        background-size: contain;
+                                        background-repeat: no-repeat;
+                                        height: 189px;
+                                        right: -48%;
+                                        background-image: url(../assets/img/tCircles.png);
+                                    }
+                                }
+
+                                &__year {
+                                    width: 9%;
+                                    margin-bottom: 20px;
+                                    display: flex;
+                                    justify-content: center;
+                                    padding: 5px;
+                                    background-color: #fcea7e;
+                                    font-weight: bold;
+                                }
+                            }
+                        }
+
+                        &__profile {}
+
+                        &__action {
+                            .action_mas {
+                                display: flex;
+                                justify-content: center;
+                                width: 100%;
+
+                                &__btn {
+                                    padding: 9px;
+                                    width: 141px;
+                                    text-align: center;
+                                    margin-top: 21px;
+                                    border: 1px solid #b8860b;
+                                    color: #ffffff;
+                                    transition: all .2s linear;
+                                    font-weight: lighter;
+                                    border-radius: 36px;
+                                    background-color: darkgoldenrod;
+                                    @include shadow_element(rgba(184, 135, 11, 0.335));
+
+                                    &:hover {
+                                        opacity: .8;
+                                        text-decoration: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    // -------------------------------------------------------
+                    //                  BANNER DEL PROFESOR
+                    // -------------------------------------------------------
+                    .card_prf {
+                        &__contenedor {
+                            background-color: #f3f1f1;
+                            border-radius: 8px;
+                            border: 1px solid #eae4e4;
+                        }
+
+                        &__icon {
+                            &::before {
+                                position: absolute;
+                                content: "";
+                                background-position-y: 14px;
+                                width: 100px;
+                                background-repeat: no-repeat;
+                                background-size: contain;
+                                height: 200px;
+                                background-image: url(../assets/img/tCircles.png);
+                            }
+                        }
+
+                        &_action {
+                            &__badge {
+                                border: 1px solid rgba(0, 128, 128, 0.3607843137254902);
+                                color: teal;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
