@@ -3,7 +3,12 @@
 
     &__contenedor {
         display: flex;
-        width: 100%;
+        width: 47%;
+        margin-left: 20px;
+        padding: 12px;
+        padding-left: 0;
+        float: left;
+        min-height: 218px;
     }
 
     &__icon {

@@ -18,7 +18,7 @@
     .ico_middle {
         width: 5%;
         float: left;
-        font-size: 30px;
+        font-size: 35px;
     }
 
     .text_middle {
@@ -26,6 +26,20 @@
         float: left;
         font-size: 28px;
         font-weight: 400;
+    }
+}
+.divide_resume {
+    width: 100%;
+    clear: both;
+    i {
+        width: 8%;
+        float: left;
+        display: contents;
+    } 
+    p {
+        padding-left: 15px;
+        width: 90%;
+        float: right;
     }
 }
 
@@ -73,7 +87,9 @@
                     &__info {
                         .prinfo_row {
                             &__name {
+                         
                                 p {
+                                    
                                     font-size: 26px;
                                     line-height: 32px;
                                 }
@@ -216,7 +232,6 @@
                         &__contenido {
                             .timeline {
                                 clear: both;
-
                                 .item_timeline {
                                     list-style: none;
                                 }
@@ -290,15 +305,91 @@
                     }
 
                     // -------------------------------------------------------
-                    //                  BANNER DEL PROFESOR
+                    //              RESUMEN DEL PROFESOR
                     // -------------------------------------------------------
                     .card_prf {
                         &__contenedor {
                             background-color: #f3f1f1;
                             border-radius: 8px;
                             border: 1px solid #eae4e4;
-                        }
+                            .prfc_row {
+                                &__name  {
+                                    color: #9b7346;
+                                    margin-bottom: 8px;
+                                }
+                                &__edit {
+                                    margin-top: 14px;
+                                    font-style: italic;
+                                    font-size: 13px;
+                                }
+                            }
+                            &.titulo_obtenido {
+                                width: 43%;
+                                padding: 0;
+                                min-height: 124px;
+                                .card_prf__content {
+                                    position: relative;
+                                    padding: 20px 24px;
+                                    width: 100%;
+                                    display: flex;
+                                    .card-prf__info {
+                                        width: 100%;
+                                    }
+                                }
+                                .prfc_row {
+                                    &__titulo {
+                                        font-size: 18px;
+                                        @extend .divide_resume;
+                                        i {
+                                            font-size: 22px;
+                                            color: $golden;
+                                        }
+                                        p {
+                                            font-size: 18px;
+                                            color: $golden;
+                                        }
+                                    }
+                                    &__tipo,
+                                    &__uni
+                                     {
+                                        @extend .divide_resume;
+                                        font-size: 14px;
+                                        i {
+                                            font-size: 22px;
+                                        }
+                                        p {
+                                            font-size: 15px;
+                                         }
+                                    }
+                                    &__anio {
+                                        position: absolute;
+                                        right: -3px;
+                                        top: -16px;
+                                        p {
+                                           font-size: 15px;
+                                           padding: .3em;
+                                           border-radius: 12px;
+                                           background-color: #fffee9;
+                                           color: white;
+                                           border-radius: 6px;
+                                           color: #79571c;
+                                           font-weight: normal;
+                                           @include shadow_element( rgba(131, 130, 124, 0.561));
+                                        }
 
+                                    }
+                                    &__ciudad {
+                                        @extend .divide_resume;
+                                        i {
+                                            font-size: 22px;
+                                        }
+                                        p {
+                                            font-size: 15px;
+                                         }
+                                    }
+                                }
+                            }
+                        }
                         &__icon {
                             &::before {
                                 position: absolute;
@@ -311,7 +402,6 @@
                                 background-image: url(../assets/img/tCircles.png);
                             }
                         }
-
                         &_action {
                             &__badge {
                                 border: 1px solid rgba(0, 128, 128, 0.3607843137254902);
