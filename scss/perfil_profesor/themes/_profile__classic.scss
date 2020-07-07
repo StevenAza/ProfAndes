@@ -144,6 +144,7 @@
 
             .cont__menu {
                 @include shadow_element(rgba(0, 0, 0, 0.137));
+                border-bottom: 1px solid rgba(128, 128, 128, 0.451);
                 z-index: 3;
                 background-color: white;
                 padding: 0px;
@@ -212,6 +213,7 @@
 
             .profile__resume {
                 padding: 20px 40px;
+                background-color: #fbfbfb;
 
                 .resume__container {
                     padding: 31px 0px;
@@ -255,11 +257,11 @@
                                         content: "";
                                         width: 300px;
                                         position: absolute;
-                                        top: -127px;
+                                        top: -82px;
                                         background-size: contain;
                                         background-repeat: no-repeat;
                                         height: 189px;
-                                        right: -48%;
+                                        right: -36%;
                                         background-image: url(../assets/img/tCircles.png);
                                     }
                                     &.oculta_anio {
@@ -480,8 +482,10 @@
                 align-items: center;
                 justify-content: center;
                 .prf_header--contenedor {
+                    position: fixed;
                     .prf_header {
                         padding: 0;
+                        max-height: 85vh;
                         &__image {
                             height: 6em;
                      
@@ -501,13 +505,35 @@
                             }
                         }
                         &__info {
-                            border-left: 1px solid $golden;
                             padding-left: 2em;
-                            width: 65%;
+                            width: 80%;
                             margin: 0%;
                             margin-left: 15%;
                             z-index: 2;
+                            .prcontact_row {
+                                display: flex;
+                                margin-bottom: 9px;
+                                .icon_divive {
+                                    display: flex;
+                                    justify-content: center;
+                                }
+                            }
                             .prinfo_row {
+                                &__title {
+                                    display: flex;
+                                    border-bottom: 1px solid $golden;
+                                   // @include shadow_element(rgba(128, 128, 128, 0.089));
+                                   box-shadow: 0 10px 10px -9px #828282;
+                                   margin-bottom: 22px;
+                                    .icon_divive {
+                                        display: flex;
+                                        justify-content: center;
+                                    }
+                                    .text_divide {
+                                        font-size: 16px;
+                                        font-weight: 500;
+                                    }
+                                }
                                 &__name  {
                                     p {
                                         font-size: 41px;
@@ -522,6 +548,12 @@
                             }
                         }
                     }
+                }
+            }
+            .con__information {
+                //padding: 20px 90px;
+                .profile__resume {
+                    padding: 20px 90px;
                 }
             }
         }

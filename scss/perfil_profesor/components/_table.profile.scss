@@ -1,0 +1,21 @@
+.main_teach {
+
+    table {
+        tr {
+            th {
+                background-color: #f3f1f1;
+                border: 1px solid rgb(190, 187, 187);
+                padding: 1em;
+                @extend %prof-font;
+                font-weight: 400;
+                color: $golden;
+            }
+            td {
+                padding: 1em;
+                border: 1px solid rgb(190, 187, 187);
+            }
+        }
+    }
+
+ 
+}
