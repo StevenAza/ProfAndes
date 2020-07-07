@@ -46,10 +46,9 @@
 .main_teach {
     &.prof_style__classic {
         @extend %prof-font;
-
         .cont__header {
             .prf_header--contenedor {
-                padding: 0px 20px;
+                padding: 10px 20px;
 
                 .prf_header {
                     min-height: 60vh;
@@ -234,6 +233,7 @@
                                 clear: both;
                                 .item_timeline {
                                     list-style: none;
+                                    position: relative;
                                 }
 
                                 &__content {
@@ -247,8 +247,10 @@
                                     border: 1px solid #eae4e4;
                                     width: 45%;
                                     position: relative;
+                                    opacity: 1;
                                     overflow: hidden;
-
+                                    transition: all .3s linear;
+                                    transform: translateY(0px);
                                     &::before {
                                         content: "";
                                         width: 300px;
@@ -260,6 +262,9 @@
                                         right: -48%;
                                         background-image: url(../assets/img/tCircles.png);
                                     }
+                                    &.oculta_anio {
+                                       display: none;
+                                    }
                                 }
 
                                 &__year {
@@ -270,6 +275,54 @@
                                     padding: 5px;
                                     background-color: #fcea7e;
                                     font-weight: bold;
+                                    clear: both;
+                                    position: relative;
+                                    cursor: pointer;
+                                    transition: all .3s ease-in-out;
+                                    &::before {
+                                        content: "";
+                                        position: absolute;
+                                        right: -293px;
+                                        width: 355px;
+                                        height: 20px;
+                                        z-index: -1;
+                                        top: -3px;
+                                        border-bottom: 1px solid #b1aeae;
+                                    }
+                                    &:hover {
+                                        @include shadow_element(rgba(31, 31, 32, 0.246));
+                                    }
+                                }
+                                &.proyectos {
+                                    .timeline {
+                                        .item_timeline {
+                                            display: flex;
+                                            flex-direction: column;
+                                       
+                                        }
+                                        &__content {
+                                            margin-bottom: 2em;
+                                        }
+                                        &__titulo {
+                                            color: $golden;
+                                            font-weight: 400;
+                                            @extend %prof-font;
+                                        }
+                                        &__ciclo,
+                                        &__tipo {
+                                            clear: both;
+                                            i {
+                                                width: 6%;
+                                                font-size: 22px;
+                                                float: left;                                            }
+                                             p {
+                                                 font-weight: 700;
+                                                 padding-left: 8px;
+                                                 width: 94%;
+                                                 float: left; 
+                                             }
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -406,6 +459,66 @@
                             &__badge {
                                 border: 1px solid rgba(0, 128, 128, 0.3607843137254902);
                                 color: teal;
+                            }
+                        }
+                    }
+                    &:first-child {
+                        margin-top: 2em;
+                    }
+                }
+            }
+        }
+        &.pr_item__top {
+            .cont__header {
+                background-image: url('../assets/img/pattern.png');
+                background-attachment: fixed;
+                background-repeat: no-repeat;
+                background-size: cover;
+                min-height: 90vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                .prf_header--contenedor {
+                    .prf_header {
+                        padding: 0;
+                        &__image {
+                            height: 6em;
+                     
+                            margin-bottom: 0px;
+                            background: linear-gradient(40deg,#e4672aed,#ffd371);                           
+                             .clipart {
+                            background-image: none;
+                            }
+                            figure {
+                                justify-content: flex-start;
+                                 img {
+                                    @include shadow_element(rgba(44, 44, 44, 0.39));
+                                    margin-top: 7em;
+                                    z-index: 3;
+                                    margin-left: 2em;
+                                 }
+                            }
+                        }
+                        &__info {
+                            border-left: 1px solid $golden;
+                            padding-left: 2em;
+                            width: 65%;
+                            margin: 0%;
+                            margin-left: 15%;
+                            z-index: 2;
+                            .prinfo_row {
+                                &__name  {
+                                    p {
+                                        font-size: 41px;
+                                        line-height: 32px;
+                                        margin-top: -49px;
+                                        z-index: 9999999999;
+                                        font-weight: 100;
+                                        margin-bottom: 1em;
+                                        color: #ffffff;
+                                    }
+                                }
                             }
                         }
                     }
