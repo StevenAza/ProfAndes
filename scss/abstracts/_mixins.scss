@@ -2,6 +2,13 @@ $phone:667px;
 $tablet:920px;
 $desktop:1024px;
 $desktopxl:1930px;
+
+
+// colors 
+$bg-classic: #fdf47e;
+$gold-classic: #b8860b;
+$shadow-classic: rgba(184, 135, 11, 0.335);
+$secundary-classic: #fff;
 @mixin breakpoint($media) {
     @if $media==phone {
         @media (max-width: $phone) {
@@ -27,6 +34,181 @@ $desktopxl:1930px;
 @mixin flex-in  {
     display: flex;
     flex-direction: row;
+}
+
+@mixin theme_component($theme) {
+    @if $theme==material {
+        .resume_row__contenido {
+            &.custom {
+                h1,h2,h3,h4,h5,h6{
+                    @extend %prof-font;
+                    letter-spacing: -2px;
+                    font-weight: lighter;
+                    &:before {
+                        content: "";
+                        background-color: #4facfe;
+                        height: 1em;
+                        width: .1em;
+                        display: inline-flex;
+                        margin-bottom: 1em;
+                    }
+                }
+                h3 {
+                    font-size: 26px;
+                }
+                h4 {
+                    font-size: 25px;
+                }
+                h5 {
+                    font-size: 24px;
+                }
+                h6 {
+                    font-size: 23px;
+                }
+                a {
+                    @extend %prof-font;
+                    text-decoration: none;
+                    padding: 9px;
+                    width: 141px;
+                    text-align: center;
+                    margin-top: 21px;
+                    border: 1px solid $btn-color;
+                    color: $secundary-classic;
+                    transition: all .2s linear;
+                    font-weight: lighter;
+                    border-radius: 36px;
+                    background-color: $btn-color;
+                    @include shadow_element($shadow-material);
+                    &:hover {
+                        opacity: .8;
+                    }
+                }
+                p{
+                    text-align: justify;
+                    font-size: 15px;
+                    display: inline-flex;
+                    position: relative;
+                    @extend %prof-font;
+                    padding-left: 1em;
+                }
+                ul {
+                    li {
+                        @extend %prof-font;
+                        font-size: 16px;
+                    }
+                }
+                ol {
+                    li {
+                        @extend %prof-font;
+                        font-size: 16px;
+                    }
+                }
+                table {
+                    tr {
+                        th {
+                            background-color: #f3f1f1;
+                            border: 1px solid rgba(110,130,214,.49);
+                            padding: 1em;
+                            @extend %prof-font;
+                            font-weight: 400;
+                            color: $titulo-material;
+                        }
+                        td {
+                            padding: 1em;
+                            border: 1px solid rgba(110,130,214,.49);
+                        }
+                    }
+                }
+            }
+            
+        } 
+    }
+    @if $theme==classic {
+        .resume_row__contenido {
+            &.custom {
+                h1,h2,h3,h4,h5,h6{
+                    @extend %prof-font;
+                    &:before {
+                        content: "";
+                        background-color: $bg-classic;
+                        height: 1em;
+                        width: 1em;
+                        display: inline-flex;
+                        border-radius: 50%;
+                        margin-bottom: 1em;
+                    }
+                }
+                a {
+                    @extend %prof-font;
+                    text-decoration: none;
+                    padding: 9px;
+                    width: 141px;
+                    text-align: center;
+                    margin-top: 21px;
+                    border: 1px solid $gold-classic;
+                    color: $secundary-classic;
+                    transition: all .2s linear;
+                    font-weight: lighter;
+                    border-radius: 36px;
+                    background-color: $gold-classic;
+                    @include shadow_element($shadow-classic);
+                    &:hover {
+                        opacity: .6;
+                    }
+                }
+                p{
+                    line-height: 1;
+                    text-align: justify;
+                    font-size: 16px;
+                    display: inline-flex;
+                    position: relative;
+                    @extend %prof-font;
+                    padding-left: 1em;
+                    &:before {
+                        content: "";
+                        border-left: 9px solid $bg-classic;
+                        width: 39px;
+                        height: 100%;
+                        position: absolute;
+                        margin-left: -1em;
+                    }
+                }
+                ul {
+                    li {
+                        @extend %prof-font;
+                        font-size: 16px;
+                    }
+                }
+                ol {
+                    li {
+                        @extend %prof-font;
+                        font-size: 16px;
+                    }
+                }
+                table {
+                    tr {
+                        th {
+                            background-color: #f3f1f1;
+                            border: 1px solid rgb(190, 187, 187);
+                            padding: 1em;
+                            @extend %prof-font;
+                            font-weight: 400;
+                            color: $golden;
+                        }
+                        td {
+                            padding: 1em;
+                            border: 1px solid rgb(190, 187, 187);
+                        }
+                    }
+                }
+            }
+            
+        } 
+    }
+    @if $theme==dark {
+    
+    }
+  
 }
 
 // BOX-SHADOWS

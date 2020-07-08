@@ -1,0 +1,48 @@
+// --------------------------------------------
+// --------------------------------------------
+//          CLASES HEREDABLES
+// --------------------------------------------
+// --------------------------------------------
+.divide_icon {
+    .text_divide {
+        width: 86%;
+        float: right;
+    }
+
+    .icon_divive {
+        width: 14%;
+        float: left;
+        font-size: 22px;
+    }
+}
+.title_icon {
+    float: left;
+    width: 100%;
+
+    .ico_middle {
+        width: 5%;
+        float: left;
+        font-size: 35px;
+    }
+
+    .text_middle {
+        width: 95%;
+        float: left;
+        font-size: 28px;
+        font-weight: 400;
+    }
+}
+.divide_resume {
+    width: 100%;
+    clear: both;
+    i {
+        width: 8%;
+        float: left;
+        display: contents;
+    } 
+    p {
+        padding-left: 15px;
+        width: 90%;
+        float: right;
+    }
+}
