@@ -1,0 +1,697 @@
+.main_teach {
+    &.prof_style__dark {
+        padding-top: 0;
+        @extend %prof-font;
+        background-color: $dark-bg;
+        .cont__header {
+            .prf_header--contenedor {
+                padding: 10px 20px;
+
+                .prf_header {
+                    min-height: 60vh;
+                    max-height: 90vh;
+                    height: auto;
+                    overflow: auto;
+                    overflow-x: hidden;
+                    padding: 14px 20px;
+                    background-color: white;
+                    border-radius: 7px;
+                    @include shadow_element(rgba(0, 0, 0, 0.822));
+                    &__image {
+                        margin-bottom: 18px;
+                        display: flex;
+                        justify-content: start;
+                        figure {
+                            img {
+                                border-radius: 10px;
+                                z-index: 1;
+                                @include shadow_element(rgba(128, 128, 128, 0.623));
+                            }
+                        }
+
+                        .clipart {
+                            background-image: none;
+                        }
+                    }
+
+                    &__info {
+                        .prinfo_row {
+                            &__name {
+                                p {
+                                    color: $btn-contrast;
+                                    font-size: 26px;
+                                    line-height: 32px;
+                                    letter-spacing: 0px;
+                                }
+                            }
+
+                            &__title {
+                                @extend .divide_icon;
+                                display: flex;
+                                position: relative;
+                                margin-bottom: 2em;
+                                border-bottom: 1px solid $dark-subtitle;
+                                .icon_divive {
+                                    color: $dark-subtitle;
+                                }
+                                .text_divide {
+                                    color: $dark-subtitle;
+                                }
+                                &::after {
+                                    position: absolute;
+                                    content: "";
+                                    height: 10px;
+                                    width: 10px;
+                                    border-radius: 50%;
+                                    background-color: $dark-subtitle;
+                                    right: 0;
+                                    bottom: -5px;
+                                }
+                            }
+                        }
+
+                        .prcontact_row {
+                            clear: both;
+                            margin-bottom: 9px;
+                            @extend .divide_icon;
+                            display: flex;
+                        }
+                    }
+
+                    &::-webkit-scrollbar {
+                        width: 4px;
+                        height: 9px;
+                        background-color: rgba(109, 102, 102, 0.23);
+                        display: block;
+                    }
+
+                    &::-webkit-scrollbar-thumb {
+                        background: #326533;
+                        border-radius: 12px;
+                    }
+
+                    &::-webkit-scrollbar-thumb:active {
+                        background: #626262;
+                    }
+
+                    &::-webkit-scrollbar-track {
+                        background:#afbfb8;
+                        border-radius: 4px;
+                    }
+                }
+            }
+        }
+
+        .con__information {
+            @include shadow_element(rgba(0, 0, 0, 0.2));
+            padding: 0;
+
+            .cont__menu {
+                @include shadow_element(rgba(0, 0, 0, 0.801));
+                z-index: 3;
+                background-color: $grey-constrast;
+                padding: 0px;
+
+                .content-menu-filter {
+                    .content-filter-row {
+                        display: flex;
+                        justify-content: space-between;
+
+                        .row_tab {
+                            font-size: 16px;
+                            min-width: auto;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            height: 64px;
+                            width: 100%;
+                            align-items: center;
+                            position: relative;
+                            transition: all .3s linear;
+                            cursor: pointer;
+                            background-color: $grey-constrast;
+
+                            &__text {
+                                text-align: center;
+                                color: white;
+                            }
+
+                            &__icon {
+                                font-size: 22px;
+                                color: white;
+                            }
+
+                            &::before {
+                                content: "";
+                                transition: all .2s linear;
+                                position: absolute;
+                                bottom: 0;
+                                height: 3px;
+                                width: 0%;
+                                background: linear-gradient(40deg, $btn-contrast, $dark-contrast);
+                            }
+
+                            &.active,
+                            &:hover {
+                                transition: all .5s linear;
+                                background-color: $dark-opacity;
+
+                                .row_tab {
+                                    &__text {
+                                        color: $dark-contrast;
+                                    }
+
+                                    &__icon {
+                                        color: $dark-contrast;
+                                    }
+
+                                }
+
+                                &::before {
+                                    content: "";
+                                    width: 77%;
+                                }
+                            }
+                        }
+                    }
+                    div[class*='swiper-button-'] {
+                        border-radius: 50%;
+                        background-color: white;
+                        height: 32px;
+                        width: 32px;
+                        opacity: .6;
+                        top: 68%;
+                        @include shadow_element(rgba(128, 128, 128, 0.527));
+                        &:hover {
+                            opacity: 1;
+                        }                 
+                     }
+                }
+            }
+
+            .profile__resume {
+                padding: 20px 40px;
+                @include shadow_element(rgb(26, 24, 24));
+                background-color: $dark-bg;
+
+                .resume__container {
+                    @include shadow_element(rgba(0, 0, 0, 0.726));
+                    padding: 1em;
+                    background-color: $grey-constrast;
+                    color: white;
+                    margin-bottom: 2em;
+                    border-radius: 5px;
+
+                    // -------------------------------------------------------
+                    //                 PANELS Y RESUMEN DEL PROFESOR
+                    // -------------------------------------------------------
+                    .resume_row {
+                        &__title {
+                            .title_resume_row {
+                                @extend .title_icon;
+                                margin-bottom: 15px;
+                                .text_middle {
+                                    font-weight: normal;
+                                }
+
+                            }
+                        }
+
+                        &__contenido {
+                            .timeline {
+                                clear: both;
+                                color: black;
+
+                                .item_timeline {
+                                    list-style: none;
+                                    position: relative;
+                                }
+
+                                &__content {
+                                    float: left;
+                                    height: 100%;
+                                    background-color: #f3f1f1;
+                                    list-style: none;
+                                    border-radius: 8px;
+                                    padding: 20px;
+                                    margin-right: 15px;
+                                    width: 45%;
+                                    position: relative;
+                                    opacity: 1;
+                                    overflow: hidden;
+                                    @include shadow_element(rgb(24, 24, 24));
+                                    transition: all .3s linear;
+                                    transform: translateY(0px);
+                                    &::before {
+                                        content: "";
+                                        width: 300px;
+                                        position: absolute;
+                                        top: -44px;
+                                        background-size: contain;
+                                        background-repeat: no-repeat;
+                                        height: 189px;
+                                        right: -78%;
+                                        background-image: url(../assets/img/adorno.png);
+                                    }
+
+                                    &.oculta_anio {
+                                        display: none;
+                                    }
+                                }
+                                &__titulo {
+                                    font-weight: 400;
+                                    color: $dark-subtitle;
+                                }
+                                &__year {
+                                    width: 9%;
+                                    margin-bottom: 20px;
+                                    display: flex;
+                                    justify-content: center;
+                                    padding: 5px;
+                                    background-color: $btn-contrast;
+                                    font-weight: bold;
+                                    clear: both;
+                                    position: relative;
+                                    border-radius: 30px;
+                                    color: white;
+                                    cursor: pointer;
+                                    transition: all .3s ease-in-out;
+                                    @include shadow_element(rgba(93, 131, 32, 0.486));
+
+                                    &::before {
+                                        content: "";
+                                        position: absolute;
+                                        right: -355px;
+                                        width: 355px;
+                                        height: 20px;
+                                        top: -3px;
+                                        border-bottom: 1px solid $btn-contrast;
+                                    }
+
+                                    &:hover {
+                                        opacity: .8;
+                                        @include shadow_element(rgba(93, 131, 32, 0.76));
+                                    }
+                                }
+
+                                &.proyectos {
+                                    .timeline {
+                                        .item_timeline {
+                                            display: flex;
+                                            flex-direction: column;
+
+                                        }
+
+                                        &__content {
+                                            margin-bottom: 2em;
+                                        }
+
+                                        &__titulo {
+                                            color: $dark-subtitle;
+                                            font-weight: 400;
+                                            @extend %prof-font;
+                                        }
+
+                                        &__ciclo,
+                                        &__tipo {
+                                            clear: both;
+
+                                            i {
+                                                width: 6%;
+                                                font-size: 22px;
+                                                float: left;
+                                            }
+
+                                            p {
+                                                font-weight: 700;
+                                                padding-left: 8px;
+                                                width: 94%;
+                                                float: left;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &__action {
+                            .action_mas {
+                                display: flex;
+                                justify-content: center;
+                                width: 100%;
+
+                                &__btn {
+                                    padding: 9px;
+                                    width: 141px;
+                                    text-align: center;
+                                    margin-top: 21px;
+                                    color: #ffffff;
+                                    transition: all .2s linear;
+                                    font-weight: lighter;
+                                    border-radius: 7px;
+                                    background: linear-gradient(135deg,#57c984,#184e68);
+                                    @include shadow_element(rgba(87, 201, 133, 0.52));
+
+                                    &:hover {
+                                        opacity: .8;
+                                        text-decoration: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    // -------------------------------------------------------
+                    //              RESUMEN DEL PROFESOR
+                    // -------------------------------------------------------
+                    .card_prf {
+                        &__contenedor {
+                            background-color: #f3f1f1;
+                            border-radius: 8px;
+                            @include shadow_element(rgba(128, 128, 128, 0.349));
+                            color: $grey-constrast;
+                            .prfc_row {
+                                &__name {
+                                    color: $btn-contrast;
+                                    margin-bottom: 8px;
+                                }
+
+                                &__edit {
+                                    margin-top: 14px;
+                                    font-style: italic;
+                                    font-size: 13px;
+                                }
+                            }
+
+                            &.titulo_obtenido {
+                                width: 43%;
+                                padding: 0;
+                                min-height: 124px;
+
+                                .card_prf__content {
+                                    position: relative;
+                                    padding: 20px 24px;
+                                    width: 100%;
+                                    display: flex;
+
+                                    .card-prf__info {
+                                        width: 100%;
+                                    }
+                                }
+
+                                .prfc_row {
+                                    &__titulo {
+                                        font-size: 18px;
+                                        @extend .divide_resume;
+
+                                        i {
+                                            font-size: 22px;
+                                            color: $btn-contrast;
+                                        }
+
+                                        p {
+                                            font-size: 18px;
+                                            color: $btn-contrast;
+                                        }
+                                    }
+
+                                    &__tipo,
+                                    &__uni {
+                                        @extend .divide_resume;
+                                        font-size: 14px;
+
+                                        i {
+                                            font-size: 22px;
+                                        }
+
+                                        p {
+                                            font-size: 15px;
+                                        }
+                                    }
+
+                                    &__anio {
+                                        position: absolute;
+                                        right: -3px;
+                                        top: -16px;
+
+                                        p {
+                                            font-size: 15px;
+                                            padding: .3em;
+                                            border-radius: 12px;
+                                            background-color: $btn-contrast;
+                                            color: white;
+                                            border: 1px solid rgba(110,130,214,.49);
+                                            border-radius: 6px;
+                                            color: white;
+                                            font-weight: normal;
+                                            @include shadow_element(rgba(93, 131, 32, 0.397));
+                                        }
+
+                                    }
+
+                                    &__ciudad {
+                                        @extend .divide_resume;
+
+                                        i {
+                                            font-size: 22px;
+                                        }
+
+                                        p {
+                                            font-size: 15px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &__icon {
+                            &::before {
+                                position: absolute;
+                                content: "";
+                                background-position-y: 14px;
+                                width: 100px;
+                                background-repeat: no-repeat;
+                                background-size: contain;
+                                height: 200px;
+                                right: 1px;
+                                opacity: .4;
+                                top: -13px;
+                                background-image: url(../assets/img/adorno2.png);
+                            }
+                        }
+
+                        &_action {
+                            &__badge {
+                                background-color: #fff;
+                                color: #3f9a79;
+                                position: relative;
+                                padding: 7px 7px 7px 22px;
+                                border: 1px solid;
+                                &::before {
+                                    content: "";
+                                    width: 10px;
+                                    height: 10px;
+                                    border-radius: 50%;
+                                    display: inline-block;
+                                    background-color: teal;
+                                    margin-left: -15px;
+                                    position: absolute;
+                                    top: 11px;        
+                                }
+                            }
+                        }
+                    }
+
+                    &:first-child {
+                        margin-top: 2em;
+                    }
+                }
+            }
+        }
+
+        &.pr_item__top {
+            .cont__header {
+                background-image: url('../assets/img/pattern_dark.png');
+                //background-attachment: fixed;
+                background-repeat: no-repeat;
+                background-size: cover;
+                min-height: 90vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                .prf_header--contenedor {
+                    position: fixed;
+
+                    .prf_header {
+                        padding: 0;
+                        max-height: 85vh;
+                        background-color: $grey-constrast;
+
+                        //overflow: visible;
+                        &__image {
+                            height: 6em;
+                            margin-bottom: 0px;
+                            background-color: #313138;
+                            .clipart {
+                                background-image: none;
+                            }
+
+                            figure {
+                                justify-content: flex-start;
+
+                                img {
+                                    @include shadow_element(rgba(44, 44, 44, 0.39));
+                                    margin-top: 6em;
+                                    z-index: 3;
+                                    margin-left: 2em;
+                                }
+                            }
+                        }
+
+                        &__info {
+                            padding-left: 2em;
+                            width: 80%;
+                            margin: 0%;
+                            margin-left: 15%;
+                            z-index: 2;
+
+                            .prcontact_row {
+                                display: flex;
+                                margin-bottom: 9px;
+
+                                .icon_divive {
+                                    display: flex;
+                                    justify-content: center;
+                                    color: white;
+                                }
+                                .text_divide {
+                                    color: white;
+                                }
+                            }
+
+                            .prinfo_row {
+                                &__title {
+                                    display: flex;
+                                    border-bottom: 1px solid $dark-contrast;
+                                    margin-bottom: 22px;
+
+                                    .icon_divive {
+                                        display: flex;
+                                        justify-content: center;
+                                        color: $dark-contrast;
+                                    }
+
+                                    .text_divide {
+                                        font-size: 16px;
+                                        font-weight: 400;
+                                        color: $dark-contrast;
+                                    }
+                                    &:after {
+                                        background-color: $dark-contrast;
+                                    }
+                                }
+
+                                &__name {
+                                    p {
+                                        font-size: 41px;
+                                        line-height: 32px;
+                                        margin-top: -49px;
+                                        z-index: 9999999999;
+                                        font-weight: 100;
+                                        margin-bottom: 1em;
+                                        color: #fff;
+                                        padding-left: 1em;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .con__information {
+
+                //padding: 20px 90px;
+                .profile__resume {
+                    padding: 20px 90px;
+                    .resume_row {
+                        &__profile {
+                            padding: 2em;
+                            p {
+                                text-align: justify;
+                            }
+                        }
+                        &__contenido {
+                            .timeline {
+                                &__content {
+
+                                    &::before {
+                                        content: "";
+                                        width: 300px;
+                                        position: absolute;
+                                        top: -82px;
+                                        background-size: contain;
+                                        background-repeat: no-repeat;
+                                        height: 189px;
+                                        right: -49%;
+                                        background-image: url(../assets/img/adorno.png);
+                                    }
+
+                                }
+                                &__titulo {
+                                    font-weight: 400;
+                                    color: btn-contrast;
+                                }
+
+
+                                &.proyectos {
+                                    .timeline {
+                                        .item_timeline {
+                                            display: flex;
+                                            flex-direction: column;
+
+                                        }
+
+                                        &__content {
+                                            margin-bottom: 2em;
+                                        }
+
+                                        &__titulo {
+                                            color: $dark-subtitle;
+                                            font-weight: 400;
+                                            @extend %prof-font;
+                                        }
+
+                                        &__ciclo,
+                                        &__tipo {
+                                            clear: both;
+
+                                            i {
+                                                width: 6%;
+                                                font-size: 22px;
+                                                float: left;
+                                            }
+
+                                            p {
+                                                font-weight: 700;
+                                                padding-left: 8px;
+                                                width: 94%;
+                                                float: left;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            &.custom {
+                                padding: 43px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @include theme_component(dark);
+    }
+}

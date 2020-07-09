@@ -205,8 +205,94 @@ $secundary-classic: #fff;
             
         } 
     }
-    @if $theme==dark {
-    
+   @if $theme==dark {
+        .resume_row__contenido {
+            &.custom {
+                h1,h2,h3,h4,h5,h6{
+                    @extend %prof-font;
+                    font-weight: normal;
+                }
+                h3 {
+                    font-size: 26px;
+                }
+                h4 {
+                    font-size: 25px;
+                }
+                h5 {
+                    font-size: 24px;
+                }
+                h6 {
+                    font-size: 23px;
+                }
+                a {
+                    @extend %prof-font;
+                    text-decoration: none;
+                    padding: 9px;
+                    width: 141px;
+                    text-align: center;
+                    margin-top: 21px;
+                    color: $secundary-classic;
+                    transition: all .2s linear;
+                    font-weight: normal;
+                    border-radius: 4px;
+                    background: linear-gradient(135deg,#57c984,#184e68);
+                    @include shadow_element(rgba(87, 201, 133, 0.507));
+                    &:hover {
+                        opacity: .8;
+                    }
+                }
+                p{
+                    text-align: justify;
+                    font-size: 15px;
+                    display: inline-flex;
+                    position: relative;
+                    @extend %prof-font;
+                    padding-left: 1em;
+                }
+                ul {
+                    li {
+                        @extend %prof-font;
+                        font-size: 16px;
+                    }
+                }
+                ol {
+                    li {
+                        @extend %prof-font;
+                        font-size: 16px;
+                    }
+                }
+                table {
+                    margin: 3em 0em;
+                    @include shadow_element(rgb(0, 0, 0));
+                    border-radius: 7px;
+                    tr {
+                        th {
+                            background-color: rgb(254, 255, 239);
+                            border-right: 1px solid rgb(85, 105, 76);
+                            padding: 1em;
+                            font-weight: 400;
+                            color: #547b17;
+                            &:first-child {
+                                border-top-left-radius: 7px;
+                            }
+                            &:last-child {
+                                border-top-right-radius: 7px;
+                                border-right: 0px;
+                            }
+                        }
+                        td {
+                            padding: 1em;
+                            border-right: 1px solid rgb(85, 105, 76);
+                            &:last-child {
+                             border-bottom-left-radius: 20px;
+                             border-right: none;
+                            }
+                        }
+                    }
+                }
+            }
+            
+        } 
     }
   
 }
